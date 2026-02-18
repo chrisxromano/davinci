@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Auto-updating validator script for RESI subnet.
+Auto-updating validator script for DaVinci subnet.
 
 Based on: https://github.com/macrocosm-os/pretraining/blob/main/scripts/start_validator.py
 
@@ -39,7 +39,7 @@ log = logging.getLogger(__name__)
 UPDATES_CHECK_TIME = timedelta(minutes=5)
 PROJECT_ROOT = Path(__file__).parent.parent
 ECOSYSTEM_CONFIG_PATH = PROJECT_ROOT / "config" / "ecosystem.config.js"
-VALIDATOR_MODULE = "real_estate.validator.validator"
+VALIDATOR_MODULE = "davinci.validator.validator"
 
 
 def check_pm2_installed() -> None:
@@ -227,7 +227,7 @@ if __name__ == "__main__":
     )
 
     parser = argparse.ArgumentParser(
-        description="Auto-updating RESI validator runner.",
+        description="Auto-updating DaVinci validator runner.",
         epilog=(
             "Example:\n"
             "  python scripts/start_validator.py \\\n"
@@ -240,8 +240,8 @@ if __name__ == "__main__":
     # Script-specific args
     parser.add_argument(
         "--pm2_name",
-        default="resi_validator",
-        help="PM2 process name (default: resi_validator)",
+        default="davinci_validator",
+        help="PM2 process name (default: davinci_validator)",
     )
 
     # Validator args (forwarded to validator)
@@ -297,7 +297,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--wandb.entity",
         dest="wandb_entity",
-        default=os.environ.get("WANDB_ENTITY", "resi-labs"),
+        default=os.environ.get("WANDB_ENTITY", "davinci-labs"),
     )
     parser.add_argument(
         "--burn_amount",

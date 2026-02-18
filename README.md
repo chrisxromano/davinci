@@ -1,45 +1,36 @@
-# RESI - Real Estate Price Prediction Subnet
+# DaVinci - GPR Bridge Scan Rebar Detection Subnet
 
-**Subnet 46** on Bittensor Mainnet | [Dashboard](https://dashboard.resilabs.ai) | [Validator Guide](docs/VALIDATOR.md) | [Miner Guide](docs/MINER.md) | [Twitter](https://x.com/resilabsai)
+**Subnet 46** on Bittensor Mainnet | [Validator Guide](docs/VALIDATOR.md) | [Miner Guide](docs/MINER.md)
 
 ---
 
 ## Overview
 
-RESI is a Bittensor subnet that incentivizes the development of accurate real estate price prediction models. Miners compete to build the best ONNX models for predicting US residential property prices, while validators evaluate predictions against ground-truth sales data.
+DaVinci is a Bittensor subnet that incentivizes the development of accurate GPR (Ground Penetrating Radar) bridge scan rebar detection models. Miners compete to build the best ONNX models for classifying rebar presence in GPR scan windows, while validators evaluate predictions against ground-truth labeled data.
 
 ### Key Features
 
-- **Daily Evaluation Cycle**: Models are evaluated daily at 18:00 UTC against real sales data
-- **Never-Before-Seen Data**: Models must be committed ~31 hours before evaluation; evaluation uses last 24 hours of sales data - ensuring models are tested on data they couldn't have seen
+- **Owner-Provided Evaluation Data**: Subnet owner drops labeled GPR scan data; validators load and evaluate automatically
+- **Binary Classification**: Models classify each GPR scan window as rebar-present (1) or rebar-absent (0)
 - **Winner-Takes-All**: Best performing model receives 99% of emissions
 
 ---
 
 ## Incentive Mechanism
 
-### Evaluation on Unseen Data
-
-To ensure models generalize rather than memorize, RESI enforces a temporal separation:
-
-- **Commit Cutoff**: Models must be committed on-chain **~31 hours before evaluation**
-- **Fresh Data**: Evaluation uses sales data from the **last 24 hours**
-
-This guarantees that every model is tested against data that didn't exist when the model was submitted.
-
 ### How Scoring Works
 
-Models are scored using **MAPE (Mean Absolute Percentage Error)**:
+Models are scored using **F1 Score** (harmonic mean of precision and recall):
 
 ```
-Score = 1 - MAPE
+Score = F1
 ```
 
-Example: A model with 8.5% average prediction error has a score of 0.915.
+Example: A model with 92% precision and 88% recall has an F1 score of 0.90.
 
 ### Winner Selection
 
-RESI uses a **threshold + commit-time mechanism** to reward innovation:
+DaVinci uses a **threshold + commit-time mechanism** to reward innovation:
 
 1. **Find Best Score**: Identify the highest-scoring model
 2. **Define Winner Set**: All models within a configurable threshold of the best score qualify
@@ -99,9 +90,8 @@ See the [Miner Guide](docs/MINER.md) for complete setup instructions.
 | **Format** | ONNX (`.onnx` file) |
 | **Max Size** | 200 MB |
 | **License** | MIT (verified via HuggingFace metadata) |
-| **Commit Age** | Must be committed ~31 hours before evaluation |
-| **Input** | Property features (see documentation) |
-| **Output** | Predicted price in USD |
+| **Input** | `(batch, 1, depth, width)` float32 GPR scan windows |
+| **Output** | `(batch,)` or `(batch, 1)` float32 rebar detection scores |
 
 ---
 
@@ -120,12 +110,12 @@ See the [Miner Guide](docs/MINER.md) for complete setup instructions.
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Clone and setup
-git clone https://github.com/resi-labs-ai/RESI-models.git
-cd RESI-models
+git clone <repository-url>
+cd DAVINCI-subnet
 uv sync
 
 # Run tests
-uv run pytest real_estate/tests/ -v
+uv run pytest davinci/tests/ -v
 ```
 
 ### Development Workflow
@@ -139,12 +129,6 @@ uv run ruff check --fix .
 uv run ruff format .
 
 # Testing
-uv run pytest real_estate/tests/ -v
-uv run pytest real_estate/tests/ --cov=real_estate
+uv run pytest davinci/tests/ -v
+uv run pytest davinci/tests/ --cov=davinci
 ```
-
----
-
-## Support
-
-- **GitHub Issues**: https://github.com/resi-labs-ai/RESI-models/issues

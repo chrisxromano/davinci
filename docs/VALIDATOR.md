@@ -14,14 +14,13 @@
 - [Troubleshooting](#troubleshooting)
 - [Architecture](#architecture)
 - [Security Recommendations](#security-recommendations)
-- [Support](#support)
 
 ## Overview
 
-The main responsibilities of a RESI validator are:
+The main responsibilities of a DaVinci validator are:
 
 - Download Models: Fetch miner ONNX models from HuggingFace
-- Evaluate: Run inference against daily validation data
+- Evaluate: Run inference against evaluation data (GPR scan windows)
 - Set Weights: Submit scores to the Bittensor blockchain
 
 ## Hardware Requirements
@@ -47,8 +46,8 @@ Suggested starting point - adjust based on your load and number of miners on the
 ### Clone and Install
 
 ```bash
-git clone https://github.com/resi-labs-ai/RESI-models.git
-cd RESI-models
+git clone <repository-url>
+cd DAVINCI-subnet
 uv sync
 ```
 
@@ -95,7 +94,7 @@ NETUID=46
 # =============================================================================
 WANDB_API_KEY=your_wandb_api_key_here
 WANDB_PROJECT=subnet-46-evaluations-mainnet
-WANDB_ENTITY=resi-labs
+WANDB_ENTITY=davinci-labs
 ```
 
 ### WandB Setup (Recommended)
@@ -127,7 +126,7 @@ Verify Pylon is running:
 docker ps
 
 # Check logs
-docker logs resi_pylon
+docker logs davinci_pylon
 
 # Test API is responding (NETUID: mainnet=46, testnet=428 , local=<localnet_netuid>)
 curl http://localhost:8000/api/v1/identity/validator/subnet/<NETUID>/block/latest/neurons
@@ -141,7 +140,7 @@ The validator runs model inference in isolated Docker containers. Build the imag
 docker compose build onnx-runner
 ```
 
-This builds the `resi-onnx-runner:latest` image used for sandboxed model evaluation.
+This builds the `davinci-onnx-runner:latest` image used for sandboxed model evaluation.
 
 ### Start Validator
 
@@ -152,7 +151,7 @@ The auto-update script checks for new versions every 5 minutes and automatically
 ```bash
 # Load environment and start
 set -a && source .env && set +a
-pm2 start "uv run python scripts/start_validator.py" --name resi_autoupdater
+pm2 start "uv run python scripts/start_validator.py" --name davinci_autoupdater
 ```
 
 Or pass arguments directly:
@@ -163,23 +162,23 @@ pm2 start "uv run python scripts/start_validator.py \
     --wallet.hotkey default \
     --netuid 46 \
     --pylon.token YOUR_PYLON_TOKEN \
-    --pylon.identity validator" --name resi_autoupdater
+    --pylon.identity validator" --name davinci_autoupdater
 ```
 This creates two PM2 processes:
 
-- resi_autoupdater - monitors for updates and manages the validator
-- resi_validator - the actual validator process
+- davinci_autoupdater - monitors for updates and manages the validator
+- davinci_validator - the actual validator process
 
 **Option B: Manual Start (No Auto-Updates)**
 
 ```bash
-set -a && source .env && set +a 
-pm2 start "uv run python -m real_estate.validator.validator \
+set -a && source .env && set +a
+pm2 start "uv run python -m davinci.validator.validator \
     --wallet.name validator \
     --wallet.hotkey default \
     --netuid 46 \
     --pylon.token YOUR_PYLON_TOKEN \
-    --pylon.identity validator" --name resi_validator
+    --pylon.identity validator" --name davinci_validator
 ```
 
 ### Verify Startup
@@ -188,14 +187,14 @@ pm2 start "uv run python -m real_estate.validator.validator \
 
 ```bash
 pm2 status
-pm2 logs resi_validator --lines 50
-pm2 logs resi_autoupdater --lines 50
+pm2 logs davinci_validator --lines 50
+pm2 logs davinci_autoupdater --lines 50
 ```
 
 #### Check Pylon Logs
 
 ```bash
-docker logs -f resi_pylon
+docker logs -f davinci_pylon
 ```
 
 #### Expected Startup Logs
@@ -213,24 +212,24 @@ INFO | Pre-download phase: ...
 
 **If using auto-updates:**
 ```bash
-pm2 stop resi_autoupdater resi_validator
+pm2 stop davinci_autoupdater davinci_validator
 ```
 
 **If running manually (no auto-updates):**
 ```bash
-pm2 stop resi_validator
+pm2 stop davinci_validator
 ```
 
 ### Restart Validator
 
 **If using auto-updates:**
 ```bash
-pm2 restart resi_autoupdater
+pm2 restart davinci_autoupdater
 ```
 
 **If running manually:**
 ```bash
-pm2 restart resi_validator
+pm2 restart davinci_validator
 ```
 
 ### Stop Pylon
@@ -243,38 +242,38 @@ docker compose down
 
 ```bash
 # Validator logs
-pm2 logs resi_validator
+pm2 logs davinci_validator
 
 # Auto-updater logs (if using auto-updates)
-pm2 logs resi_autoupdater
+pm2 logs davinci_autoupdater
 
 # Pylon logs
-docker logs -f resi_pylon
+docker logs -f davinci_pylon
 ```
 
 ### Full Restart
 
 **If using auto-updates:**
 ```bash
-pm2 delete resi_autoupdater resi_validator
+pm2 delete davinci_autoupdater davinci_validator
 docker compose down
 docker compose up -d
 set -a && source .env && set +a
-pm2 start "uv run python scripts/start_validator.py" --name resi_autoupdater
+pm2 start "uv run python scripts/start_validator.py" --name davinci_autoupdater
 ```
 
 **If running manually:**
 ```bash
-pm2 delete resi_validator
+pm2 delete davinci_validator
 docker compose down
 docker compose up -d
 set -a && source .env && set +a
-pm2 start "uv run python -m real_estate.validator.validator \
+pm2 start "uv run python -m davinci.validator.validator \
     --wallet.name validator \
     --wallet.hotkey default \
     --netuid 46 \
     --pylon.token YOUR_PYLON_TOKEN \
-    --pylon.identity validator" --name resi_validator
+    --pylon.identity validator" --name davinci_validator
 ```
 
 ## Log Management
@@ -302,43 +301,43 @@ pm2 set pm2-logrotate:rotateInterval '0 0 * * *'
 This will:
 - Rotate logs daily at midnight (or when they exceed 100MB)
 - Keep 30 days of logs
-- Name files with sortable dates (e.g., `resi_validator-out__2026-01-28.log`)
+- Name files with sortable dates (e.g., `davinci_validator-out__2026-01-28.log`)
 
 ### View Logs
 
 ```bash
 # Current logs
-pm2 logs resi_validator
+pm2 logs davinci_validator
 
 # List rotated log files
 ls ~/.pm2/logs/
 
 # View a specific day's logs
-cat ~/.pm2/logs/resi_validator-out__2026-01-28.log
+cat ~/.pm2/logs/davinci_validator-out__2026-01-28.log
 
 # Search for errors across all logs
-grep -E "\| ERROR \||\| CRITICAL \|" ~/.pm2/logs/resi_validator-out*.log
+grep -E "\| ERROR \||\| CRITICAL \|" ~/.pm2/logs/davinci_validator-out*.log
 ```
 
 ### Pylon Logs
 
-Pylon uses Docker's json-file logging driver with automatic rotation (50MB × 10 files = 500MB max). Logs persist across container restarts but are removed when the container is deleted.
+Pylon uses Docker's json-file logging driver with automatic rotation (50MB x 10 files = 500MB max). Logs persist across container restarts but are removed when the container is deleted.
 
 ```bash
 # View live pylon logs
-docker logs -f resi_pylon
+docker logs -f davinci_pylon
 
 # View recent logs (last 100 lines)
-docker logs --tail 100 resi_pylon
+docker logs --tail 100 davinci_pylon
 
 # View logs from last 24 hours
-docker logs --since 24h resi_pylon
+docker logs --since 24h davinci_pylon
 
 # Search pylon logs for errors
-docker logs resi_pylon 2>&1 | grep -i error
+docker logs davinci_pylon 2>&1 | grep -i error
 
 # Export logs for debugging with subnet teams
-docker logs --since 24h resi_pylon > pylon_debug.log 2>&1
+docker logs --since 24h davinci_pylon > pylon_debug.log 2>&1
 ```
 
 ## Configuration Reference
@@ -364,19 +363,17 @@ docker logs --since 24h resi_pylon > pylon_debug.log 2>&1
 | `PYLON_URL` | `http://localhost:8000` | Pylon service URL |
 | `ARCHIVE_NETWORK` | `finney` | Archive network for Pylon historical block lookups |
 | `ARCHIVE_BLOCKS_CUTOFF` | `256` | Blocks older than this use archive node |
-| **Validation Schedule** | | |
-| `VALIDATION_DATA_URL` | `https://dashboard.resilabs.ai` | Validation data API URL |
-| `VALIDATION_DATA_SCHEDULE_HOUR` | `18` | Hour (UTC) for daily evaluation |
-| `VALIDATION_DATA_SCHEDULE_MINUTE` | `0` | Minute for daily evaluation |
-| `VALIDATION_DATA_MAX_RETRIES` | `24` | Retry attempts if data not ready (~2 hours) |
-| `VALIDATION_DATA_RETRY_DELAY` | `300` | Seconds between retries |
+| **Evaluation Data** | | |
+| `EVAL_DATA_DIR` | `./eval_data` | Directory where subnet owner drops `.npz` evaluation files |
+| `EVAL_DATA_POLL_SECONDS` | `300` | Seconds between polls for new evaluation data |
+| `EVAL_DATA_SCHEDULE_HOUR` | `18` | Hour (UTC) for scheduled daily evaluation |
+| `EVAL_DATA_SCHEDULE_MINUTE` | `0` | Minute for scheduled daily evaluation |
 | **Burn Configuration** | | |
 | `BURN_AMOUNT` | `0.5` | Fraction of emissions to burn (0.0-1.0) |
 | `BURN_UID` | `238` | UID receiving burn allocation (subnet owner) |
 | **Model Settings** | | |
 | `MODEL_CACHE_PATH` | `./model_cache` | Path to cache downloaded models |
 | `MODEL_MAX_SIZE_MB` | `200` | Maximum model size in MB |
-| `MODEL_MIN_COMMITMENT_AGE_BLOCKS` | `8400` | Min blocks before model eligible (~28 hours) |
 | **Scheduler** | | |
 | `SCHEDULER_PRE_DOWNLOAD_HOURS` | `3.0` | Hours before eval to start downloads |
 | `SCHEDULER_CATCH_UP_MINUTES` | `30.0` | Minutes reserved for catch-up downloads |
@@ -394,7 +391,7 @@ docker logs --since 24h resi_pylon > pylon_debug.log 2>&1
 | **WandB** | | |
 | `WANDB_API_KEY` | | WandB API key (request from subnet owners on Discord) |
 | `WANDB_PROJECT` | `subnet-46-evaluations-mainnet` | WandB project name |
-| `WANDB_ENTITY` | `resi-labs` | WandB team/entity |
+| `WANDB_ENTITY` | `davinci-labs` | WandB team/entity |
 | `WANDB_OFF` | `false` | Disable WandB logging |
 | `WANDB_OFFLINE` | `false` | Run WandB in offline mode (logs saved locally) |
 
@@ -429,7 +426,7 @@ SUBTENSOR_NETWORK=ws://your-node:port
 docker ps
 
 # Check logs
-docker logs resi_pylon
+docker logs davinci_pylon
 
 # Verify wallet path exists
 ls ~/.bittensor/wallets/$WALLET_NAME
@@ -460,18 +457,18 @@ If you see `ModuleNotFoundError`:
 uv sync
 
 # Run with uv
-uv run python -m real_estate.validator.validator ...
+uv run python -m davinci.validator.validator ...
 ```
 
 ### Chain Connection Errors
 
 1. Check network connectivity
 2. Verify `SUBTENSOR_NETWORK` is correct
-3. Check Pylon logs for WebSocket errors: `docker logs resi_pylon`
+3. Check Pylon logs for WebSocket errors: `docker logs davinci_pylon`
 
 ### Docker Image Not Found
 
-If you see `Docker image 'resi-onnx-runner:latest' not found`:
+If you see `Docker image 'davinci-onnx-runner:latest' not found`:
 
 ```bash
 # Build the ONNX runner image
@@ -518,7 +515,7 @@ The validator consists of two components:
 
 **Pylon** (Docker) - Handles all Bittensor chain interactions including metagraph sync, weight setting, and commitment queries. Runs as a separate service to isolate chain communication.
 
-**Validator Process** (PM2) - Downloads miner models from HuggingFace, runs daily evaluation against validation data, scores predictions, and determines weight distribution.
+**Validator Process** (PM2) - Downloads miner models from HuggingFace, runs evaluation against GPR scan data, scores predictions using classification metrics (F1), and determines weight distribution.
 
 ## Security Recommendations
 
@@ -526,7 +523,3 @@ The validator consists of two components:
 2. **Pylon bound to localhost**: docker-compose binds to `127.0.0.1:8000` by default
 3. **Wallets mounted read-only**: Docker volume uses `:ro` flag
 4. **Keep software updated**: Auto-update script handles this automatically
-
-## Support
-
-- GitHub Issues: https://github.com/resi-labs-ai/RESI-models/issues

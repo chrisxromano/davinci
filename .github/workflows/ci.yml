@@ -43,7 +43,7 @@ jobs:
         run: uv sync --dev
 
       - name: Run mypy
-        run: uv run mypy real_estate neurons --ignore-missing-imports
+        run: uv run mypy davinci neurons --ignore-missing-imports
         # Note: Will pass even if dirs don't exist yet (no files to check)
         continue-on-error: true  # Remove this once codebase has type hints
 
@@ -63,7 +63,7 @@ jobs:
         run: uv sync --dev
 
       - name: Run unit tests
-        run: uv run pytest real_estate/tests/unit/ -v --tb=short
+        run: uv run pytest davinci/tests/unit/ -v --tb=short
 
   integration-test:
     name: Test (Integration)
@@ -81,10 +81,10 @@ jobs:
         run: uv sync --dev
 
       - name: Build evaluation Docker image
-        run: docker build -t resi-onnx-runner:latest real_estate/evaluation/
+        run: docker build -t davinci-onnx-runner:latest davinci/evaluation/
 
       - name: Run integration tests
-        run: uv run pytest real_estate/tests/integration/ -v --tb=short
+        run: uv run pytest davinci/tests/integration/ -v --tb=short
 
   # Summary job that depends on all others - useful for branch protection
   ci-success:

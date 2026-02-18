@@ -24,8 +24,8 @@ import json
 import os
 import sys
 
-from real_estate.chain import ChainClient, ExtrinsicData, PylonConfig
-from real_estate.chain.errors import (
+from davinci.chain import ChainClient, ExtrinsicData, PylonConfig
+from davinci.chain.errors import (
     AuthenticationError,
     ChainConnectionError,
     CommitmentError,
@@ -188,7 +188,7 @@ async def test_commitments(pylon_url: str, token: str, identity: str, hotkey: st
             else:
                 model_metadata = {
                     "h": "sha256:abc123def456",
-                    "r": "testuser/resi-model",
+                    "r": "testuser/davinci-model",
                     "v": "1.0.0",
                 }
             commitment_bytes = json.dumps(model_metadata, separators=(",", ":")).encode("utf-8")

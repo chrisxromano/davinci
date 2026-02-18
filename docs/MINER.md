@@ -1,6 +1,6 @@
 # Miner CLI Guide
 
-Guide for miners on the Real Estate Price Prediction Subnet (Bittensor subnet 46).
+Guide for miners on the DaVinci GPR Bridge Scan Subnet (Bittensor subnet 46).
 
 ## Overview
 
@@ -8,7 +8,7 @@ The miner CLI (`miner-cli`) helps you:
 1. **Evaluate** your ONNX model locally before submission
 2. **Submit** your model commitment to the Bittensor blockchain
 
-**How it works:** You train a model to predict real estate prices, test it locally, upload it to HuggingFace, then submit a commitment to the chain. Validators download your model, verify it matches your commitment, and score it based on prediction accuracy.
+**How it works:** You train a model to detect rebar in GPR bridge scan windows, test it locally, upload it to HuggingFace, then submit a commitment to the chain. Validators download your model, verify it matches your commitment, and score it based on classification accuracy.
 
 ## Model Requirements
 
@@ -16,10 +16,10 @@ The miner CLI (`miner-cli`) helps you:
 |-------------|---------------|
 | Format | ONNX |
 | Max size | 200 MB |
-| Input shape | `(batch, 79)` float32 |
+| Input shape | `(batch, 1, depth, width)` float32 |
 | Output shape | `(batch, 1)` or `(batch,)` float32 |
 
-Your model must accept exactly **79 features** in the order defined in `real_estate/data/mappings/feature_config.yaml`.
+Your model must accept single-channel GPR scan windows as 4D input `(batch, 1, depth, width)` and output rebar detection scores (0-1 probabilities or binary labels).
 
 ## Prerequisites
 
@@ -31,8 +31,8 @@ Your model must accept exactly **79 features** in the order defined in `real_est
 ## Installation
 
 ```bash
-git clone https://github.com/resi-labs-ai/RESI-models.git
-cd RESI-models
+git clone <repository-url>
+cd DAVINCI-subnet
 
 # Install with pip
 pip install -e .
@@ -45,7 +45,7 @@ Expected output:
 ```
 usage: miner-cli [-h] {evaluate,submit} ...
 
-RESI Miner CLI - Evaluate and submit ONNX models
+DaVinci Miner CLI - Evaluate and submit ONNX models
 
 positional arguments:
   {evaluate,submit}  Command to execute
@@ -61,7 +61,7 @@ positional arguments:
 miner-cli evaluate --model.path ./my_model.onnx
 ```
 
-Check that metrics meet targets (MAPE < 15%, Score > 0.85).
+Check that metrics meet targets (F1 > 0.85).
 
 ### Step 2: Create HuggingFace Repository
 
@@ -97,7 +97,7 @@ After submitting, add these files to your HuggingFace repo:
 
 ### Step 5: Wait for Validation
 
-Validators will automatically download your model, verify the hash matches your commitment, and score it based on prediction accuracy.
+Validators will automatically download your model, verify the hash matches your commitment, and score it based on classification accuracy.
 If your repository is private when validation occurs, your model will not be scored.
 
 ## Commands Reference
@@ -118,7 +118,7 @@ miner-cli evaluate --model.path PATH [--max-size-mb MB]
 **What it checks:**
 1. File exists and is under size limit
 2. Valid ONNX format
-3. Correct input shape (batch, 79)
+3. Correct input shape (batch, 1, depth, width)
 4. Correct output shape
 5. No NaN or Inf in predictions
 
@@ -127,24 +127,25 @@ miner-cli evaluate --model.path PATH [--max-size-mb MB]
 Evaluating model: ./my_model.onnx
 
 Evaluation Results:
-  MAPE:  8.15%
-  Score: 0.9185
-  MAE:   $23,450
-  RMSE:  $67,890
-  R²:    0.8234
+  Accuracy:  91.50%
+  Precision: 92.30%
+  Recall:    88.70%
+  F1 Score:  0.9046
+  Score:     0.9046
 
 Inference time: 245ms
+
 ✓ Model is valid and ready for submission.
 ```
 
 **Metrics explained:**
 | Metric | What it measures | Target |
 |--------|------------------|--------|
-| MAPE | Mean Absolute Percentage Error | < 15% |
-| Score | 1 - MAPE (higher is better) | > 0.85 |
-| MAE | Average dollar error | Lower is better |
-| RMSE | Penalizes large errors more | Lower is better |
-| R² | Variance explained (0-1) | > 0.70 |
+| Accuracy | Overall correct predictions | > 85% |
+| Precision | True positives / predicted positives | Higher is better |
+| Recall | True positives / actual positives | Higher is better |
+| F1 Score | Harmonic mean of precision and recall | > 0.85 |
+| Score | F1 Score (used for ranking) | > 0.85 |
 
 ### miner-cli submit
 
@@ -167,7 +168,7 @@ miner-cli submit \
 | Argument | Required | Default | Description |
 |----------|----------|---------|-------------|
 | `--model.path` | Yes | - | Path to local ONNX model file |
-| `--hf.repo_id` | Yes | - | HuggingFace repo (e.g., `alice/housing-model`) |
+| `--hf.repo_id` | Yes | - | HuggingFace repo (e.g., `alice/gpr-rebar-v1`) |
 | `--wallet.name` | Yes | - | Bittensor wallet name |
 | `--wallet.hotkey` | Yes | - | Wallet hotkey name |
 | `--network` | No | `finney` | Network: `finney`, `test`, or `ws://` endpoint |
@@ -215,7 +216,7 @@ Submitting model to chain...
 ✓ Model committed to chain with commit-reveal!
 
 Commitment details:
-  Repository:         alice/housing-v1
+  Repository:         alice/gpr-rebar-v1
   Model hash:         a3f8c2e9d1b4f6a8...
   Submitted at block: 142857
   Commit-reveal:      Yes (reveal at drand round 25864000)
@@ -241,7 +242,7 @@ Next steps:
 Your repo must contain:
 
 ```
-your-username/housing-model/
+your-username/gpr-rebar-v1/
 ├── model.onnx              # Your ONNX model (required)
 └── extrinsic_record.json   # Chain commitment link (required)
 ```
@@ -274,7 +275,7 @@ Validators perform these checks before scoring your model:
 
 **Pre-download (via HuggingFace API):**
 1. MIT license in model card metadata (`license: mit` in README.md)
-2. model.onnx size ≤ 200MB
+2. model.onnx size <= 200MB
 3. extrinsic_record.json exists and is valid
 4. Extrinsic exists on chain and was signed by your hotkey
 
@@ -299,12 +300,12 @@ ERROR: Invalid ONNX format: Unable to parse proto from file...
 ```
 **Fix:** Re-export your model. Test with `onnx.checker.check_model("model.onnx")`.
 
-### Wrong number of features
+### Wrong input dimensions
 
 ```
-ERROR: Model expects 72 features, but validator expects 79.
+ERROR: Input shape [...] invalid. Expected 4D shape (batch, 1, depth, width) for GPR scan windows.
 ```
-**Fix:** Retrain your model with the correct 79 input features from `feature_config.yaml`.
+**Fix:** Ensure your model accepts 4D input `(batch, 1, depth, width)` where the channel dimension is 1.
 
 ### Model too large
 
@@ -350,8 +351,3 @@ Warning: Could not find extrinsic in scanned blocks
 ERROR: HF repo ID too long: 64 bytes exceeds 51 byte limit
 ```
 **Fix:** Use a shorter repository name.
-
-## Support
-
-- GitHub Issues: [RESI-models Issues](https://github.com/resi-labs-ai/RESI-models/issues)
-- Discord: [Join the Real Estate subnet channel](https://discord.com/channels/799672011265015819/1397618038894759956)

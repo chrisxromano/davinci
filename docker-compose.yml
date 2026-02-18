@@ -5,7 +5,7 @@
 services:
   pylon:
     image: backenddevelopersltd/bittensor-pylon:1.0.0
-    container_name: resi_pylon
+    container_name: davinci_pylon
     command: >
       pylon_service/.venv/bin/python -m uvicorn pylon_service.main:app
       --host 0.0.0.0 --port 8000
@@ -39,6 +39,6 @@ services:
 
   # ONNX Runner image for model evaluation (build-only, not a running service)
   onnx-runner:
-    build: ./real_estate/evaluation
-    image: resi-onnx-runner:latest
+    build: ./davinci/evaluation
+    image: davinci-onnx-runner:latest
     profiles: ["build"]

@@ -390,7 +390,7 @@ docker logs --since 24h davinci_pylon > pylon_debug.log 2>&1
 | `LOG_LEVEL` | `DEBUG` | Logging level (DEBUG, INFO, WARNING, ERROR) |
 | **WandB** | | |
 | `WANDB_API_KEY` | | WandB API key (request from subnet owners on Discord) |
-| `WANDB_PROJECT` | `subnet-46-evaluations-mainnet` | WandB project name |
+| `WANDB_PROJECT` | `davinci-evaluations-mainnet` | WandB project name |
 | `WANDB_ENTITY` | `davinci-labs` | WandB team/entity |
 | `WANDB_OFF` | `false` | Disable WandB logging |
 | `WANDB_OFFLINE` | `false` | Run WandB in offline mode (logs saved locally) |

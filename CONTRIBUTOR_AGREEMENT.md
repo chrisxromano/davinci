@@ -8,11 +8,11 @@
 
 ## Overview
 
-This Model Contributor Agreement ("Agreement") governs your submission of AI models, model weights, architectures, training code, evaluation code, datasets, or related materials (collectively, "Submitted Materials") to DaVinci Labs for use in Bittensor Subnet 46.
+This Model Contributor Agreement ("Agreement") governs your submission of AI models, model weights, architectures, training code, evaluation code, datasets, or related materials (collectively, "Submitted Materials") to DaVinci Labs for use in Bittensor the DaVinci Subnet.
 
-**⚠️ Important:** By submitting materials to Subnet 46, you agree to be bound by this Agreement. Please read it carefully.
+**⚠️ Important:** By submitting materials to the DaVinci Subnet, you agree to be bound by this Agreement. Please read it carefully.
 
-**MIT License Requirement:** All models submitted to Subnet 46 must be licensed under the MIT License. See Section 5 for details.
+**MIT License Requirement:** All models submitted to the DaVinci Subnet must be licensed under the MIT License. See Section 5 for details.
 
 **Legal Review Notice:** DaVinci Labs recommends that contributors consult with their own legal counsel before submitting materials.
 
@@ -43,11 +43,11 @@ This Model Contributor Agreement ("Agreement") governs your submission of AI mod
 
 **1.2 "DaVinci Labs"** means DaVinci Labs and its affiliates, subsidiaries, successors, and assigns.
 
-**1.3 "Submitted Materials"** means any and all AI models, neural network weights, model architectures, training scripts, evaluation code, datasets, documentation, or related materials that You submit to DaVinci Labs through Subnet 46 or any related platform.
+**1.3 "Submitted Materials"** means any and all AI models, neural network weights, model architectures, training scripts, evaluation code, datasets, documentation, or related materials that You submit to DaVinci Labs through the DaVinci Subnet or any related platform.
 
-**1.4 "Subnet 46"** means the decentralized AI model evaluation subnet operating on the Bittensor network and managed by DaVinci Labs.
+**1.4 "the DaVinci Subnet"** means the decentralized AI model evaluation subnet operating on the Bittensor network and managed by DaVinci Labs.
 
-**1.5 "Reward"** means TAO tokens or other compensation that DaVinci Labs may distribute to Contributors based on the Subnet 46 incentive mechanism.
+**1.5 "Reward"** means TAO tokens or other compensation that DaVinci Labs may distribute to Contributors based on the the DaVinci Subnet incentive mechanism.
 
 **1.6 "Base Model"** means any pre-trained AI model that Your Submitted Materials are based upon, derived from, fine-tuned from, or otherwise incorporate.
 
@@ -57,7 +57,7 @@ This Model Contributor Agreement ("Agreement") governs your submission of AI mod
 
 ### 2.1 MIT License Requirement
 
-All models submitted to Subnet 46 must be licensed under the **MIT License**. By requiring MIT licensing, Your Submitted Materials are openly available under permissive terms.
+All models submitted to the DaVinci Subnet must be licensed under the **MIT License**. By requiring MIT licensing, Your Submitted Materials are openly available under permissive terms.
 
 ### 2.2 What MIT License Means
 
@@ -83,7 +83,7 @@ You retain:
 
 Under the MIT License, DaVinci Labs has the same rights as any other recipient:
 
-- Use Your Submitted Materials in Subnet 46 operations
+- Use Your Submitted Materials in the DaVinci Subnet operations
 - Evaluate, benchmark, and score Your models
 - Create derivative works or improvements
 - Use for commercial purposes
@@ -92,10 +92,10 @@ DaVinci Labs does not claim any exclusive rights to MIT-licensed Submitted Mater
 
 ### 2.5 Acknowledgment
 
-By submitting MIT-licensed materials to Subnet 46, You acknowledge that:
+By submitting MIT-licensed materials to the DaVinci Subnet, You acknowledge that:
 
 - Anyone may use Your Submitted Materials under MIT terms
-- DaVinci Labs operates Subnet 46 infrastructure but does not own exclusive rights to submitted models
+- DaVinci Labs operates the DaVinci Subnet infrastructure but does not own exclusive rights to submitted models
 - Other participants may study, learn from, or build upon Your work (with attribution)
 
 ---
@@ -225,7 +225,7 @@ Base model and license information must be provided:
 
 ### 5.1 MIT License Requirement
 
-All models submitted to Subnet 46 MUST be licensed under the **MIT License**. The validator automatically verifies this by checking the HuggingFace model card metadata.
+All models submitted to the DaVinci Subnet MUST be licensed under the **MIT License**. The validator automatically verifies this by checking the HuggingFace model card metadata.
 
 ### 5.2 License Setup on HuggingFace
 
@@ -255,7 +255,7 @@ The MIT License requirement ensures:
 DaVinci Labs reserves the right to:
 - Verify that Your HuggingFace repositories contain the correct license metadata
 - Request You update or correct licensing information within 7 days
-- Remove Your models from Subnet 46 if licensing is incorrect or missing
+- Remove Your models from the DaVinci Subnet if licensing is incorrect or missing
 - Terminate Your account for repeated licensing violations
 
 ---
@@ -307,7 +307,7 @@ Your indemnification obligation does not apply to claims arising solely from:
 
 ### 6.1 Reward Structure
 
-Rewards for Submitted Materials are distributed according to Subnet 46's incentive mechanism, which:
+Rewards for Submitted Materials are distributed according to the DaVinci Subnet's incentive mechanism, which:
 
 a) **Performance-Based:** Rewards are based on model performance, utility, and other factors determined by DaVinci Labs and the Bittensor protocol;
 
@@ -327,7 +327,7 @@ d) **Distributed in TAO:** Rewards are paid in TAO tokens (the native cryptocurr
 - A fiduciary relationship
 - Any obligation for DaVinci Labs to provide You with work or compensation
 
-You are participating in Subnet 46 voluntarily. Rewards are incentive payments, not wages or fees for services.
+You are participating in the DaVinci Subnet voluntarily. Rewards are incentive payments, not wages or fees for services.
 
 ### 6.3 Tax Responsibilities
 
@@ -405,7 +405,7 @@ Your Submitted Materials are licensed under MIT, which means:
 
 a) **Open Access:** Anyone (including DaVinci Labs) may use, modify, distribute, and commercialize the Submitted Materials under MIT terms;
 
-b) **Platform Operation:** DaVinci Labs may use Submitted Materials to operate Subnet 46, including evaluation, scoring, and display of results;
+b) **Platform Operation:** DaVinci Labs may use Submitted Materials to operate the DaVinci Subnet, including evaluation, scoring, and display of results;
 
 c) **No Exclusive Rights:** DaVinci Labs does not claim exclusive rights to MIT-licensed Submitted Materials;
 
@@ -421,7 +421,7 @@ d) **Attribution:** Users of Your Submitted Materials must include the MIT licen
 
 All DaVinci Labs intellectual property remains the exclusive property of DaVinci Labs, including:
 
-- Subnet 46 validator software and algorithms
+- the DaVinci Subnet validator software and algorithms
 - Scoring and evaluation methodologies
 - DaVinci Labs's platform, APIs, and infrastructure
 - DaVinci Labs trademarks, branding, and trade dress
@@ -431,7 +431,7 @@ All DaVinci Labs intellectual property remains the exclusive property of DaVinci
 
 ### 8.3 Feedback and Suggestions
 
-If You provide DaVinci Labs with suggestions, feedback, or ideas about Subnet 46 or the platform ("Feedback"):
+If You provide DaVinci Labs with suggestions, feedback, or ideas about the DaVinci Subnet or the platform ("Feedback"):
 
 - DaVinci Labs may use the Feedback freely without obligation to You
 - You waive any rights You may have in such Feedback
@@ -449,7 +449,7 @@ YOUR SUBMITTED MATERIALS ARE PROVIDED ON AN "AS IS" BASIS WITHOUT WARRANTY OF AN
 
 DaVinci Labs DOES NOT WARRANT OR GUARANTEE THAT:
 
-a) Your Submitted Materials will be accepted into Subnet 46;
+a) Your Submitted Materials will be accepted into the DaVinci Subnet;
 
 b) Your Submitted Materials will be used or evaluated;
 
@@ -457,7 +457,7 @@ c) You will receive any Rewards or any specific amount of Rewards;
 
 d) Your Submitted Materials will function as expected or be error-free;
 
-e) Subnet 46 will continue to operate indefinitely.
+e) the DaVinci Subnet will continue to operate indefinitely.
 
 ### 8.3 DaVinci Labs's Evaluation Rights
 
@@ -467,7 +467,7 @@ DaVinci Labs reserves the right to:
 - Reject any Submitted Materials for any reason or no reason
 - Remove or disable any Submitted Materials at any time
 - Update evaluation criteria and scoring algorithms without notice
-- Discontinue Subnet 46 or change its structure
+- Discontinue the DaVinci Subnet or change its structure
 
 ### 8.4 No Warranty on Platform
 
@@ -549,7 +549,7 @@ DaVinci Labs maintains a policy of terminating accounts of Contributors who are 
 
 ### 10.1 DaVinci Labs's Confidential Information
 
-During Your participation in Subnet 46, You may have access to DaVinci Labs's confidential information, including:
+During Your participation in the DaVinci Subnet, You may have access to DaVinci Labs's confidential information, including:
 
 - Proprietary evaluation algorithms and scoring methodologies
 - Non-public technical specifications and architecture
@@ -563,7 +563,7 @@ a) Keep all DaVinci Labs confidential information confidential;
 
 b) Not disclose it to third parties without DaVinci Labs's prior written consent;
 
-c) Use it only for the purpose of participating in Subnet 46;
+c) Use it only for the purpose of participating in the DaVinci Subnet;
 
 d) Protect it with at least the same degree of care You use for Your own confidential information, but no less than reasonable care.
 
@@ -575,7 +575,7 @@ a) When You have made the materials publicly available elsewhere;
 
 b) When disclosure is required by law or legal process;
 
-c) When disclosure is necessary for Subnet 46 operation (e.g., providing access to validators);
+c) When disclosure is necessary for the DaVinci Subnet operation (e.g., providing access to validators);
 
 d) When aggregating anonymized metrics or statistics;
 
@@ -610,17 +610,17 @@ Confidentiality obligations survive for **three (3) years** after the date of di
 
 ### 11.1 Term
 
-This Agreement begins when You first submit materials to Subnet 46 and continues until terminated.
+This Agreement begins when You first submit materials to the DaVinci Subnet and continues until terminated.
 
 ### 11.2 Your Right to Terminate
 
 You may terminate this Agreement at any time by:
 
-a) Ceasing all submissions to Subnet 46;
+a) Ceasing all submissions to the DaVinci Subnet;
 
 b) Sending written notice to legal@davincilabs.ai;
 
-c) Closing Your Subnet 46 account (if applicable).
+c) Closing Your the DaVinci Subnet account (if applicable).
 
 Upon Your termination:
 - You will receive any Rewards earned but not yet distributed (subject to verification)
@@ -646,7 +646,7 @@ f) Your account is inactive for 12 months;
 g) You are subject to sanctions or in a prohibited jurisdiction.
 
 Upon DaVinci Labs's termination:
-- Your access to Subnet 46 is immediately revoked
+- Your access to the DaVinci Subnet is immediately revoked
 - Unpaid Rewards may be forfeited if termination was for cause
 - Previously submitted MIT-licensed materials remain available under MIT License terms
 
@@ -662,7 +662,7 @@ c) **Indemnification Survives:** Your indemnification obligations in Section 5 s
 
 d) **Disclaimers Survive:** Sections 8 (Disclaimers), 12 (Dispute Resolution), and 13 (General Provisions) survive;
 
-e) **Your Access Ends:** You must immediately cease accessing Subnet 46 and DaVinci Labs's platform;
+e) **Your Access Ends:** You must immediately cease accessing the DaVinci Subnet and DaVinci Labs's platform;
 
 f) **Outstanding Obligations:** Any outstanding payment obligations or liabilities survive.
 
@@ -736,7 +736,7 @@ Email: legal@davincilabs.ai
 
 Your notice must include:
 - Your name and contact information
-- Your Subnet 46 account identifier
+- Your the DaVinci Subnet account identifier
 - A clear statement that You wish to opt out of the arbitration agreement
 
 If You opt out:
@@ -927,7 +927,7 @@ If You are a government entity or contractor, DaVinci Labs provides all material
 This Agreement operates alongside:
 - **DaVinci Labs Terms of Service:** General platform usage terms
 - **DaVinci Labs Privacy Policy:** Data collection and processing
-- **Subnet 46 Rules:** Technical and operational requirements
+- **the DaVinci Subnet Rules:** Technical and operational requirements
 
 In case of conflict, this Contributor Agreement takes precedence for matters specifically related to Submitted Materials.
 
@@ -961,7 +961,7 @@ For privacy-related inquiries:
 
 **BY SUBMITTING MATERIALS TO SUBNET 46, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THIS CONTRIBUTOR AGREEMENT.**
 
-**If You do not agree to these terms, do not submit materials to Subnet 46.**
+**If You do not agree to these terms, do not submit materials to the DaVinci Subnet.**
 
 ---
 

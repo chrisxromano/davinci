@@ -1,6 +1,6 @@
 # DaVinci Subnet
 
-**Subnet 46** on Bittensor Mainnet
+A Bittensor Subnet
 
 ---
 

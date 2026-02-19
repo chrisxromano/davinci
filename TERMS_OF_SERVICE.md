@@ -1,4 +1,4 @@
-# DaVinci Labs Subnet 46 Terms of Service
+# DaVinci Labs the DaVinci Subnet Terms of Service
 
 **Version 1.0**  
 **Effective Date:** February 1, 2026  
@@ -6,11 +6,11 @@
 
 ---
 
-## Welcome to Subnet 46
+## Welcome to the DaVinci Subnet
 
-Thank you for participating in DaVinci Labs's Subnet 46, a decentralized AI model evaluation network on the Bittensor protocol. These Terms of Service ("Terms") govern your access to and use of our platform, services, and related offerings.
+Thank you for participating in DaVinci Labs's the DaVinci Subnet, a decentralized AI model evaluation network on the Bittensor protocol. These Terms of Service ("Terms") govern your access to and use of our platform, services, and related offerings.
 
-**⚠️ Important:** Please read these Terms carefully. By accessing or using Subnet 46, you agree to be bound by these Terms. If you do not agree, do not use our services.
+**⚠️ Important:** Please read these Terms carefully. By accessing or using the DaVinci Subnet, you agree to be bound by these Terms. If you do not agree, do not use our services.
 
 **Legal Notice:** This is a draft document prepared for discussion purposes. DaVinci Labs recommends consulting with your own legal counsel before using the platform, especially if you plan to submit models or receive cryptocurrency rewards.
 
@@ -43,7 +43,7 @@ Thank you for participating in DaVinci Labs's Subnet 46, a decentralized AI mode
 
 ### 1.1 Agreement to Terms
 
-By accessing, browsing, or using Subnet 46 or any DaVinci Labs services (collectively, the "Services"), you agree to be bound by:
+By accessing, browsing, or using the DaVinci Subnet or any DaVinci Labs services (collectively, the "Services"), you agree to be bound by:
 
 - These Terms of Service
 - Our [Privacy Policy](https://www.davincilabs.ai/privacy) *(create this page)*
@@ -78,15 +78,15 @@ Certain features of the Services may be subject to additional terms and conditio
 
 **"You"** or **"User"** means the individual or legal entity accessing or using the Services.
 
-**"Subnet 46"** means the decentralized AI model evaluation subnet operating on the Bittensor network and managed by DaVinci Labs.
+**"the DaVinci Subnet"** means the decentralized AI model evaluation subnet operating on the Bittensor network and managed by DaVinci Labs.
 
 **"Bittensor"** means the Bittensor network, a decentralized machine learning network.
 
 **"TAO"** means the native cryptocurrency token of the Bittensor network.
 
-**"Miner"** means a participant who submits AI models for evaluation in Subnet 46.
+**"Miner"** means a participant who submits AI models for evaluation in the DaVinci Subnet.
 
-**"Validator"** means a participant who evaluates and scores AI models in Subnet 46.
+**"Validator"** means a participant who evaluates and scores AI models in the DaVinci Subnet.
 
 **"Submitted Materials"** means AI models, code, data, or other content submitted to the Services.
 
@@ -182,9 +182,9 @@ Failure to complete verification may result in limitation or suspension of your 
 
 ## 5. Description of Services
 
-### 5.1 Subnet 46 Overview
+### 5.1 the DaVinci Subnet Overview
 
-Subnet 46 is a decentralized network for evaluating AI models, where:
+the DaVinci Subnet is a decentralized network for evaluating AI models, where:
 
 - **Miners** submit AI models for evaluation
 - **Validators** evaluate models based on performance criteria
@@ -196,7 +196,7 @@ DaVinci Labs provides the infrastructure, protocols, and incentive mechanisms th
 
 DaVinci Labs provides:
 
-a) **Platform Infrastructure:** Software, APIs, and interfaces for participating in Subnet 46
+a) **Platform Infrastructure:** Software, APIs, and interfaces for participating in the DaVinci Subnet
 
 b) **Validator Software:** Tools and code for operating validator nodes
 
@@ -234,7 +234,7 @@ We are not liable for any modification, suspension, or discontinuation of the Se
 
 You may use the Services only for lawful purposes and in accordance with these Terms. Permitted uses include:
 
-- Operating Miner or Validator nodes on Subnet 46
+- Operating Miner or Validator nodes on the DaVinci Subnet
 - Submitting AI models for evaluation (subject to Contributor Agreement)
 - Participating in the Bittensor network
 - Conducting research and development
@@ -255,7 +255,7 @@ You may **NOT**:
 - Use DaVinci Labs's trademarks or branding without permission
 
 #### c) System Abuse and Manipulation
-- Manipulate or attempt to manipulate Subnet 46's scoring or reward systems
+- Manipulate or attempt to manipulate the DaVinci Subnet's scoring or reward systems
 - Engage in Sybil attacks (creating multiple accounts/nodes to gain unfair advantage)
 - Collude with other participants to manipulate outcomes
 - Submit fraudulent or deceptive models (e.g., plagiarized models, renamed popular models)
@@ -329,7 +329,7 @@ Subject to your compliance with these Terms, DaVinci Labs grants you a limited, 
 - Access documentation and APIs
 
 This license does not include:
-- Any commercial use of the Services outside of Subnet 46 participation
+- Any commercial use of the Services outside of the DaVinci Subnet participation
 - Redistribution, sale, or licensing of DaVinci Labs's proprietary components
 - Derivative works of DaVinci Labs's proprietary software (except as permitted by applicable open source licenses)
 
@@ -348,7 +348,7 @@ The Services may include open source software components, which are subject to t
 
 ### 7.5 Trademarks
 
-"DaVinci Labs," "Subnet 46," and related logos and product names are trademarks of DaVinci Labs. You may not use these trademarks without our prior written consent, except as necessary to describe your participation in Subnet 46.
+"DaVinci Labs," "the DaVinci Subnet," and related logos and product names are trademarks of DaVinci Labs. You may not use these trademarks without our prior written consent, except as necessary to describe your participation in the DaVinci Subnet.
 
 ### 7.6 Feedback
 
@@ -383,7 +383,7 @@ Your notice must include:
 
 ### 8.1 Contributor Agreement Required
 
-If you submit AI models or related materials to Subnet 46, you must accept our [Model Contributor Agreement](CONTRIBUTOR_AGREEMENT.md), which governs:
+If you submit AI models or related materials to the DaVinci Subnet, you must accept our [Model Contributor Agreement](CONTRIBUTOR_AGREEMENT.md), which governs:
 
 - Intellectual property licensing
 - Representations and warranties
@@ -422,11 +422,11 @@ We are not responsible for monitoring all user content and have no obligation to
 
 ### 9.1 Reward Distribution
 
-Participants in Subnet 46 may earn TAO tokens ("Rewards") based on:
+Participants in the DaVinci Subnet may earn TAO tokens ("Rewards") based on:
 
 - Model performance and contribution (for Miners)
 - Validation activity (for Validators)
-- Subnet 46's incentive mechanism
+- the DaVinci Subnet's incentive mechanism
 
 **Important:**
 - Rewards are **performance-based** with no guaranteed amounts
@@ -467,7 +467,7 @@ Rewards that remain unclaimed for **12 months** due to invalid wallet addresses 
 - An independent contractor relationship
 - Any entitlement to benefits, insurance, or employment protections
 
-You are participating in Subnet 46 voluntarily. Rewards are incentive payments for participation, not compensation for services rendered.
+You are participating in the DaVinci Subnet voluntarily. Rewards are incentive payments for participation, not compensation for services rendered.
 
 ### 9.7 Tax Responsibilities
 
@@ -582,7 +582,7 @@ After Account deletion, we may retain certain data in anonymized form or as requ
 
 ### 11.1 Bittensor Network
 
-Subnet 46 operates on the Bittensor network, which is maintained by the Bittensor community and OpenTensor Foundation, not by DaVinci Labs.
+the DaVinci Subnet operates on the Bittensor network, which is maintained by the Bittensor community and OpenTensor Foundation, not by DaVinci Labs.
 
 **DaVinci Labs is not responsible for:**
 - Bittensor network availability or performance

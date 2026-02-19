@@ -1,8 +1,8 @@
 # Business Source License 1.1
 
 **Licensor:** DaVinci Labs  
-**Licensed Work:** Subnet 46 Validator Software, Incentive Mechanism, Agent Codebase, and associated Model Weights distributed by DaVinci Labs (the "Licensed Work").  
-**Additional Use Grant:** You may use the Licensed Work in production solely for operating a Miner or Validator node within Bittensor Network's Subnet 46, in accordance with the Bittensor protocol rules.  
+**Licensed Work:** the DaVinci Subnet Validator Software, Incentive Mechanism, Agent Codebase, and associated Model Weights distributed by DaVinci Labs (the "Licensed Work").  
+**Additional Use Grant:** You may use the Licensed Work in production solely for operating a Miner or Validator node within Bittensor Network's the DaVinci Subnet, in accordance with the Bittensor protocol rules.  
 **Change Date:** January 1, 2030  
 **Change License:** Apache License 2.0  
 
@@ -30,7 +30,7 @@ Licensor also grants you the Additional Use Grant specified above.
 
 You may **NOT** use the Licensed Work for any of the following purposes without obtaining a separate commercial license from DaVinci Labs:
 
-a) **Competitive Products:** Operating a commercial product or service that competes with DaVinci Labs or Subnet 46, including but not limited to:
+a) **Competitive Products:** Operating a commercial product or service that competes with DaVinci Labs or the DaVinci Subnet, including but not limited to:
    - Software-as-a-Service (SaaS) offerings
    - API services or hosted platforms
    - Commercial AI model evaluation or scoring services
@@ -38,15 +38,15 @@ a) **Competitive Products:** Operating a commercial product or service that comp
 
 b) **Commercial Distribution:** Selling, licensing, or distributing the Licensed Work or derivative works as a commercial product outside the Bittensor Network;
 
-c) **Model Training:** Using the Licensed Work to train, fine-tune, or improve AI models for commercial purposes outside of Subnet 46 mining or validation activities;
+c) **Model Training:** Using the Licensed Work to train, fine-tune, or improve AI models for commercial purposes outside of the DaVinci Subnet mining or validation activities;
 
-d) **Unauthorized Production Use:** Any production use outside of the expressly permitted Bittensor Subnet 46 participation.
+d) **Unauthorized Production Use:** Any production use outside of the expressly permitted Bittensor the DaVinci Subnet participation.
 
 ### 3. Permitted Uses
 
 The following uses are **permitted** without obtaining a commercial license:
 
-a) Operating Miner or Validator nodes on Bittensor Subnet 46;  
+a) Operating Miner or Validator nodes on Bittensor the DaVinci Subnet;  
 b) Non-production research, testing, development, and evaluation;  
 c) Educational and academic purposes;  
 d) Contributing improvements back to DaVinci Labs (subject to the Contributor Agreement);  
@@ -95,7 +95,7 @@ For commercial use outside the scope of the Additional Use Grant, please contact
 
 ## Contributing
 
-If you wish to contribute to this project or submit models to Subnet 46, please review:
+If you wish to contribute to this project or submit models to the DaVinci Subnet, please review:
 
 - **Contributor Agreement:** [CONTRIBUTOR_AGREEMENT.md](./CONTRIBUTOR_AGREEMENT.md)
 - **Terms of Service:** [TERMS_OF_SERVICE.md](./TERMS_OF_SERVICE.md)

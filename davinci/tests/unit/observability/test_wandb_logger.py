@@ -101,7 +101,7 @@ class TestWandbLoggerDisabledBehavior:
     def test_start_run_does_nothing_when_disabled(self) -> None:
         """Test start_run is no-op when disabled."""
         config = WandbConfig(enabled=False)
-        logger = WandbLogger(config, "5FTest", 46)
+        logger = WandbLogger(config, "5FTest", 1)
 
         logger.start_run()
 
@@ -110,7 +110,7 @@ class TestWandbLoggerDisabledBehavior:
     def test_log_evaluation_does_nothing_when_disabled(self) -> None:
         """Test log_evaluation is no-op when disabled."""
         config = WandbConfig(enabled=False)
-        logger = WandbLogger(config, "5FTest", 46)
+        logger = WandbLogger(config, "5FTest", 1)
 
         # Should not raise
         logger.log_evaluation(MagicMock(), MagicMock())
@@ -118,7 +118,7 @@ class TestWandbLoggerDisabledBehavior:
     def test_log_evaluation_warns_when_not_started(self) -> None:
         """Test log_evaluation warns when run not started."""
         config = WandbConfig(enabled=True)
-        logger = WandbLogger(config, "5FTest", 46)
+        logger = WandbLogger(config, "5FTest", 1)
 
         # Should not raise, just warn (no run started)
         logger.log_evaluation(MagicMock(), MagicMock())
@@ -136,7 +136,7 @@ class TestWandbLoggerStartRun:
             entity="test-entity",
             enabled=True,
         )
-        logger = WandbLogger(config, "5FValidatorHotkey123", 46)
+        logger = WandbLogger(config, "5FValidatorHotkey123", 1)
 
         mock_wandb = MagicMock()
         mock_run = MagicMock()
@@ -152,13 +152,13 @@ class TestWandbLoggerStartRun:
         assert call_kwargs["project"] == "test-project"
         assert call_kwargs["entity"] == "test-entity"
         assert call_kwargs["name"] == "my-custom-run"
-        assert "netuid-46" in call_kwargs["tags"]
+        assert "netuid-1" in call_kwargs["tags"]
         assert "validator-5FValida" in call_kwargs["tags"]
 
     def test_start_run_generates_run_name_if_not_provided(self) -> None:
         """Test that start_run generates a run name if not provided."""
         config = WandbConfig(project="test-project", enabled=True)
-        logger = WandbLogger(config, "5FValidatorHotkey123", 46)
+        logger = WandbLogger(config, "5FValidatorHotkey123", 1)
 
         mock_wandb = MagicMock()
         mock_run = MagicMock()
@@ -178,7 +178,7 @@ class TestWandbLoggerBuildEvaluationLog:
     def logger(self) -> WandbLogger:
         """Create test logger."""
         config = WandbConfig(enabled=True)
-        return WandbLogger(config, "5FValidatorHotkey123", 46)
+        return WandbLogger(config, "5FValidatorHotkey123", 1)
 
     def test_builds_log_with_correct_metrics(self, logger: WandbLogger) -> None:
         """Test that evaluation log contains correct aggregated metrics."""
@@ -193,7 +193,7 @@ class TestWandbLoggerBuildEvaluationLog:
         log = logger._build_evaluation_log(result)
 
         assert log.validator_hotkey == "5FValidatorHotkey123"
-        assert log.netuid == 46
+        assert log.netuid == 1
         assert log.dataset_size == 100
         assert log.models_evaluated == 2
         assert log.models_succeeded == 1
@@ -262,7 +262,7 @@ class TestWandbLoggerMinerTable:
     def test_creates_table_with_correct_columns(self) -> None:
         """Test that miner table has correct column structure."""
         config = WandbConfig(enabled=True)
-        logger = WandbLogger(config, "5FTest", 46)
+        logger = WandbLogger(config, "5FTest", 1)
 
         mock_wandb = MagicMock()
         mock_table = MagicMock()
@@ -305,7 +305,7 @@ class TestWandbLoggerPredictionsTable:
     def test_creates_predictions_for_top_n_miners(self) -> None:
         """Test that predictions table only includes top N miners."""
         config = WandbConfig(enabled=True, predictions_top_n_miners=2)
-        logger = WandbLogger(config, "5FTest", 46)
+        logger = WandbLogger(config, "5FTest", 1)
 
         mock_wandb = MagicMock()
         mock_table = MagicMock()
@@ -343,7 +343,7 @@ class TestWandbLoggerPredictionsTable:
     def test_logs_all_miners_when_top_n_is_none(self) -> None:
         """Test that all successful miners are logged when top_n is None."""
         config = WandbConfig(enabled=True, predictions_top_n_miners=None)
-        logger = WandbLogger(config, "5FTest", 46)
+        logger = WandbLogger(config, "5FTest", 1)
 
         mock_wandb = MagicMock()
         mock_table = MagicMock()
@@ -380,7 +380,7 @@ class TestWandbLoggerPredictionsTable:
     def test_skips_miners_without_predictions(self) -> None:
         """Test that miners with no predictions are skipped."""
         config = WandbConfig(enabled=True, predictions_top_n_miners=None)
-        logger = WandbLogger(config, "5FTest", 46)
+        logger = WandbLogger(config, "5FTest", 1)
 
         mock_wandb = MagicMock()
         mock_table = MagicMock()
@@ -420,7 +420,7 @@ class TestWandbLoggerLogEvaluation:
             log_predictions_table=True,
             predictions_top_n_miners=None,
         )
-        logger = WandbLogger(config, "5FValidator", 46)
+        logger = WandbLogger(config, "5FValidator", 1)
 
         mock_wandb = MagicMock()
         mock_table = MagicMock()
@@ -451,7 +451,7 @@ class TestWandbLoggerLogEvaluation:
             log_predictions_table=True,
             predictions_top_n_miners=None,
         )
-        logger = WandbLogger(config, "5FValidator", 46)
+        logger = WandbLogger(config, "5FValidator", 1)
 
         mock_wandb = MagicMock()
         mock_table = MagicMock()
@@ -479,7 +479,7 @@ class TestWandbLoggerLogEvaluation:
     def test_handles_exception_gracefully(self) -> None:
         """Test that log_evaluation catches exceptions and doesn't raise."""
         config = WandbConfig(enabled=True)
-        logger = WandbLogger(config, "5FValidator", 46)
+        logger = WandbLogger(config, "5FValidator", 1)
 
         mock_run = MagicMock()
         mock_run.log.side_effect = Exception("WandB error")
@@ -501,7 +501,7 @@ class TestWandbLoggerEdgeCases:
     def test_handles_all_miners_failed(self) -> None:
         """Test handling when all miners failed evaluation."""
         config = WandbConfig(enabled=True)
-        logger = WandbLogger(config, "5FValidator", 46)
+        logger = WandbLogger(config, "5FValidator", 1)
 
         mock_wandb = MagicMock()
         mock_table = MagicMock()
@@ -527,7 +527,7 @@ class TestWandbLoggerEdgeCases:
     def test_handles_empty_predictions_table(self) -> None:
         """Test handling when no miners have predictions."""
         config = WandbConfig(enabled=True, predictions_top_n_miners=None)
-        logger = WandbLogger(config, "5FValidator", 46)
+        logger = WandbLogger(config, "5FValidator", 1)
 
         mock_wandb = MagicMock()
         logger._wandb = mock_wandb

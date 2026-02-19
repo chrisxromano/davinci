@@ -449,8 +449,8 @@ class Validator:
         """
         try:
             dataset = self.data_loader.load_latest()
-        except EvaluationDataNotFoundError:
-            logger.debug("No evaluation data available yet")
+        except EvaluationDataNotFoundError as e:
+            logger.info(f"No evaluation data available: {e}")
             return False
         except Exception as e:
             logger.warning(f"Failed to load evaluation data: {e}")
@@ -479,7 +479,7 @@ class Validator:
         )
 
         if not model_paths:
-            logger.warning("No models available for evaluation")
+            logger.error("Evaluation aborted: no models available (all filtered out)")
             return
 
         # Get cached metadata from scheduler, filtered to models we're evaluating
@@ -525,31 +525,19 @@ class Validator:
             )
 
         except NoValidModelsError as e:
-            logger.warning(f"Evaluation skipped: {e}")
+            logger.error(f"Evaluation skipped — no valid models: {e}")
         finally:
             # Always finish WandB run
             self._wandb_logger.finish()
 
     async def _data_watch_loop(self) -> None:
-        """Poll the data directory for new evaluation data."""
+        """Poll the data directory to keep evaluation data fresh."""
         poll_interval = self.config.eval_data_poll_seconds
-        last_loaded_file: str | None = None
 
         while True:
             try:
                 if self._try_load_eval_data():
-                    # Check if this is actually a new file
-                    npz_files = sorted(
-                        self.data_loader.data_dir.glob("*.npz"),
-                        key=lambda p: p.stat().st_mtime,
-                        reverse=True,
-                    )
-                    current_file = npz_files[0].name if npz_files else None
-
-                    if current_file != last_loaded_file:
-                        last_loaded_file = current_file
-                        logger.info(f"New evaluation data detected: {current_file}")
-                        self._evaluation_event.set()
+                    logger.info("Evaluation data ready")
             except Exception as e:
                 logger.warning(f"Data watch error: {e}")
 
@@ -647,11 +635,24 @@ class Validator:
             # Run catch-up phase
             await self._run_catch_up_if_time(next_eval)
 
-            # Wait until after evaluation time before calculating next round
+            # Wait until scheduled evaluation time
             now = datetime.now(UTC)
             if now < next_eval:
-                wait_seconds = (next_eval - now).total_seconds() + 60  # +1min buffer
+                wait_seconds = (next_eval - now).total_seconds()
+                logger.info(f"Waiting {wait_seconds:.0f}s until evaluation at {next_eval}")
                 await asyncio.sleep(wait_seconds)
+
+            # Load evaluation data and trigger evaluation
+            if self._try_load_eval_data():
+                logger.info("Scheduled evaluation time reached, triggering evaluation")
+                self._evaluation_event.set()
+            else:
+                logger.error(
+                    "Scheduled evaluation time reached but no evaluation data available"
+                )
+
+            # Wait for evaluation to finish before calculating next round
+            await asyncio.sleep(60)
 
     async def run(self) -> None:
         """
@@ -683,7 +684,6 @@ class Validator:
 
             try:
                 await asyncio.gather(
-                    self._data_watch_loop(),
                     self._evaluation_loop(),
                     self._weight_setting_loop(),
                     self._pre_download_loop(),

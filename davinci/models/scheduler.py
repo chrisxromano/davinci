@@ -88,18 +88,42 @@ class ModelDownloadScheduler:
             Dict mapping hotkey to model path
         """
         result: dict[str, Path] = {}
+        no_commitment = 0
+        unverified = 0
+        not_cached = 0
+        hash_mismatch = 0
+
         for hotkey in registered_hotkeys:
             if hotkey not in self._known_commitments:
+                no_commitment += 1
                 continue
             commitment = self._known_commitments[hotkey]
             if commitment.block_number == 0:
                 logger.warning(
                     f"Skipping {hotkey}: commitment block unknown (not yet verified)"
                 )
+                unverified += 1
                 continue
             cached = self._downloader._cache.get(hotkey)
-            if cached and cached.metadata.hash == commitment.model_hash:
-                result[hotkey] = cached.path
+            if not cached:
+                not_cached += 1
+                continue
+            if cached.metadata.hash != commitment.model_hash:
+                logger.warning(
+                    f"Skipping {hotkey}: cached hash mismatch "
+                    f"(cached={cached.metadata.hash[:12]}... vs "
+                    f"committed={commitment.model_hash[:12]}...)"
+                )
+                hash_mismatch += 1
+                continue
+            result[hotkey] = cached.path
+
+        logger.info(
+            f"Model availability: {len(result)} ready, "
+            f"{no_commitment} no commitment, {unverified} unverified, "
+            f"{not_cached} not cached, {hash_mismatch} hash mismatch "
+            f"(from {len(registered_hotkeys)} registered)"
+        )
         return result
 
     def _update_commitment_block(

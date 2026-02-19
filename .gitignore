@@ -161,6 +161,9 @@ cython_debug/
 
 testing/
 
+# Internal docs
+claude-docs/
+
 # Editors
 .vscode/settings.json
 

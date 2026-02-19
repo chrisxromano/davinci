@@ -82,8 +82,8 @@ The Subnet 46 validator automatically checks your license:
 ## Questions?
 
 For questions about licensing:
-- **Email:** support@resilabs.ai
-- **GitHub:** https://github.com/resi-labs-ai/RESI-models/issues
+- **Email:** support@davincilabs.ai
+- **GitHub:** https://github.com/davinci-labs/davinci-subnet/issues
 
 ---
 

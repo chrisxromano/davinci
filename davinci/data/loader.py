@@ -51,6 +51,12 @@ class EvaluationDataLoader:
                 f"Data directory does not exist: {self.data_dir}"
             )
 
+        if self.data_dir.is_file():
+            raise EvaluationDataLoadError(
+                f"eval_data.dir must be a directory, not a file: {self.data_dir}. "
+                f"Use the parent directory instead: {self.data_dir.parent}"
+            )
+
         npz_files = sorted(
             self.data_dir.glob("*.npz"), key=lambda p: p.stat().st_mtime, reverse=True
         )

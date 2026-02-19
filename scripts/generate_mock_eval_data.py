@@ -8,7 +8,7 @@ with binary rebar presence labels.
 Usage:
     python scripts/generate_mock_eval_data.py
     python scripts/generate_mock_eval_data.py --output ./eval_data --num-windows 200
-    python scripts/generate_mock_eval_data.py --depth 64 --width 128 --seed 42
+    python scripts/generate_mock_eval_data.py --depth 32 --width 64 --seed 42
 """
 
 import argparse
@@ -115,11 +115,11 @@ def main():
         help="Number of GPR scan windows to generate",
     )
     parser.add_argument(
-        "--depth", type=int, default=64,
+        "--depth", type=int, default=32,
         help="Depth dimension of each window (radio wave time samples)",
     )
     parser.add_argument(
-        "--width", type=int, default=128,
+        "--width", type=int, default=64,
         help="Width dimension of each window (horizontal samples)",
     )
     parser.add_argument(

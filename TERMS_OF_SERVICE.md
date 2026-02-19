@@ -1,4 +1,4 @@
-# RESI Subnet 46 Terms of Service
+# DaVinci Labs the DaVinci Subnet Terms of Service
 
 **Version 1.0**  
 **Effective Date:** February 1, 2026  
@@ -6,13 +6,13 @@
 
 ---
 
-## Welcome to Subnet 46
+## Welcome to the DaVinci Subnet
 
-Thank you for participating in RESI's Subnet 46, a decentralized AI model evaluation network on the Bittensor protocol. These Terms of Service ("Terms") govern your access to and use of our platform, services, and related offerings.
+Thank you for participating in DaVinci Labs's the DaVinci Subnet, a decentralized AI model evaluation network on the Bittensor protocol. These Terms of Service ("Terms") govern your access to and use of our platform, services, and related offerings.
 
-**⚠️ Important:** Please read these Terms carefully. By accessing or using Subnet 46, you agree to be bound by these Terms. If you do not agree, do not use our services.
+**⚠️ Important:** Please read these Terms carefully. By accessing or using the DaVinci Subnet, you agree to be bound by these Terms. If you do not agree, do not use our services.
 
-**Legal Notice:** This is a draft document prepared for discussion purposes. RESI recommends consulting with your own legal counsel before using the platform, especially if you plan to submit models or receive cryptocurrency rewards.
+**Legal Notice:** This is a draft document prepared for discussion purposes. DaVinci Labs recommends consulting with your own legal counsel before using the platform, especially if you plan to submit models or receive cryptocurrency rewards.
 
 ---
 
@@ -43,10 +43,10 @@ Thank you for participating in RESI's Subnet 46, a decentralized AI model evalua
 
 ### 1.1 Agreement to Terms
 
-By accessing, browsing, or using Subnet 46 or any RESI services (collectively, the "Services"), you agree to be bound by:
+By accessing, browsing, or using the DaVinci Subnet or any DaVinci Labs services (collectively, the "Services"), you agree to be bound by:
 
 - These Terms of Service
-- Our [Privacy Policy](https://www.resilabs.ai/privacy) *(create this page)*
+- Our [Privacy Policy](https://www.davincilabs.ai/privacy) *(create this page)*
 - Our [Model Contributor Agreement](CONTRIBUTOR_AGREEMENT.md) (if submitting models)
 - Any additional guidelines, rules, or policies we may publish
 
@@ -74,19 +74,19 @@ Certain features of the Services may be subject to additional terms and conditio
 
 ## 2. Definitions
 
-**"RESI"** or **"we"** or **"us"** means RESI and its affiliates, subsidiaries, and successors.
+**"DaVinci Labs"** or **"we"** or **"us"** means DaVinci Labs and its affiliates, subsidiaries, and successors.
 
 **"You"** or **"User"** means the individual or legal entity accessing or using the Services.
 
-**"Subnet 46"** means the decentralized AI model evaluation subnet operating on the Bittensor network and managed by RESI.
+**"the DaVinci Subnet"** means the decentralized AI model evaluation subnet operating on the Bittensor network and managed by DaVinci Labs.
 
 **"Bittensor"** means the Bittensor network, a decentralized machine learning network.
 
 **"TAO"** means the native cryptocurrency token of the Bittensor network.
 
-**"Miner"** means a participant who submits AI models for evaluation in Subnet 46.
+**"Miner"** means a participant who submits AI models for evaluation in the DaVinci Subnet.
 
-**"Validator"** means a participant who evaluates and scores AI models in Subnet 46.
+**"Validator"** means a participant who evaluates and scores AI models in the DaVinci Subnet.
 
 **"Submitted Materials"** means AI models, code, data, or other content submitted to the Services.
 
@@ -155,7 +155,7 @@ You agree to:
 - Do not share your Account credentials with anyone
 - Secure your wallet private keys
 
-**RESI is not liable for any loss or damage arising from your failure to protect your Account credentials.**
+**DaVinci Labs is not liable for any loss or damage arising from your failure to protect your Account credentials.**
 
 ### 4.3 Account Restrictions
 
@@ -182,21 +182,21 @@ Failure to complete verification may result in limitation or suspension of your 
 
 ## 5. Description of Services
 
-### 5.1 Subnet 46 Overview
+### 5.1 the DaVinci Subnet Overview
 
-Subnet 46 is a decentralized network for evaluating AI models, where:
+the DaVinci Subnet is a decentralized network for evaluating AI models, where:
 
 - **Miners** submit AI models for evaluation
 - **Validators** evaluate models based on performance criteria
 - **Rewards** are distributed based on model performance and contribution
 
-RESI provides the infrastructure, protocols, and incentive mechanisms that enable this network.
+DaVinci Labs provides the infrastructure, protocols, and incentive mechanisms that enable this network.
 
 ### 5.2 Services Provided
 
-RESI provides:
+DaVinci Labs provides:
 
-a) **Platform Infrastructure:** Software, APIs, and interfaces for participating in Subnet 46
+a) **Platform Infrastructure:** Software, APIs, and interfaces for participating in the DaVinci Subnet
 
 b) **Validator Software:** Tools and code for operating validator nodes
 
@@ -234,7 +234,7 @@ We are not liable for any modification, suspension, or discontinuation of the Se
 
 You may use the Services only for lawful purposes and in accordance with these Terms. Permitted uses include:
 
-- Operating Miner or Validator nodes on Subnet 46
+- Operating Miner or Validator nodes on the DaVinci Subnet
 - Submitting AI models for evaluation (subject to Contributor Agreement)
 - Participating in the Bittensor network
 - Conducting research and development
@@ -251,11 +251,11 @@ You may **NOT**:
 
 #### b) Intellectual Property Infringement
 - Submit models or content that infringe third-party intellectual property rights
-- Reverse engineer, decompile, or disassemble RESI's proprietary software (except as permitted by law)
-- Use RESI's trademarks or branding without permission
+- Reverse engineer, decompile, or disassemble DaVinci Labs's proprietary software (except as permitted by law)
+- Use DaVinci Labs's trademarks or branding without permission
 
 #### c) System Abuse and Manipulation
-- Manipulate or attempt to manipulate Subnet 46's scoring or reward systems
+- Manipulate or attempt to manipulate the DaVinci Subnet's scoring or reward systems
 - Engage in Sybil attacks (creating multiple accounts/nodes to gain unfair advantage)
 - Collude with other participants to manipulate outcomes
 - Submit fraudulent or deceptive models (e.g., plagiarized models, renamed popular models)
@@ -298,7 +298,7 @@ We reserve the right (but not the obligation) to:
 
 If you become aware of any violation of these Terms, please report it to:
 
-**Email:** support@resilabs.ai  
+**Email:** support@davincilabs.ai  
 **Subject Line:** "Terms of Service Violation Report"
 
 Include:
@@ -310,9 +310,9 @@ Include:
 
 ## 7. Intellectual Property Rights
 
-### 7.1 RESI's Intellectual Property
+### 7.1 DaVinci Labs's Intellectual Property
 
-The Services and all content, features, and functionality (including but not limited to software, code, algorithms, user interfaces, designs, graphics, logos, and trademarks) are owned by RESI and are protected by:
+The Services and all content, features, and functionality (including but not limited to software, code, algorithms, user interfaces, designs, graphics, logos, and trademarks) are owned by DaVinci Labs and are protected by:
 
 - Copyright laws
 - Trademark laws
@@ -322,25 +322,25 @@ The Services and all content, features, and functionality (including but not lim
 
 ### 7.2 License to Use Services
 
-Subject to your compliance with these Terms, RESI grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to:
+Subject to your compliance with these Terms, DaVinci Labs grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to:
 
 - Access and use the Services for their intended purpose
 - Download and use validator software in accordance with its license (see LICENSE.md)
 - Access documentation and APIs
 
 This license does not include:
-- Any commercial use of the Services outside of Subnet 46 participation
-- Redistribution, sale, or licensing of RESI's proprietary components
-- Derivative works of RESI's proprietary software (except as permitted by applicable open source licenses)
+- Any commercial use of the Services outside of the DaVinci Subnet participation
+- Redistribution, sale, or licensing of DaVinci Labs's proprietary components
+- Derivative works of DaVinci Labs's proprietary software (except as permitted by applicable open source licenses)
 
 ### 7.3 Restrictions
 
 You may not:
-- Copy, modify, or create derivative works of RESI's proprietary software (except as explicitly permitted)
+- Copy, modify, or create derivative works of DaVinci Labs's proprietary software (except as explicitly permitted)
 - Distribute, sell, lease, or sublicense the Services or any part thereof
 - Reverse engineer, decompile, or disassemble proprietary components (except to the extent permitted by applicable law)
 - Remove or alter any copyright, trademark, or other proprietary notices
-- Use RESI's name, logo, or trademarks without prior written permission
+- Use DaVinci Labs's name, logo, or trademarks without prior written permission
 
 ### 7.4 Open Source Components
 
@@ -348,7 +348,7 @@ The Services may include open source software components, which are subject to t
 
 ### 7.5 Trademarks
 
-"RESI," "Subnet 46," and related logos and product names are trademarks of RESI. You may not use these trademarks without our prior written consent, except as necessary to describe your participation in Subnet 46.
+"DaVinci Labs," "the DaVinci Subnet," and related logos and product names are trademarks of DaVinci Labs. You may not use these trademarks without our prior written consent, except as necessary to describe your participation in the DaVinci Subnet.
 
 ### 7.6 Feedback
 
@@ -364,8 +364,8 @@ We respect intellectual property rights and expect users to do the same. We will
 
 **To report copyright infringement, send a DMCA notice to:**
 
-**DMCA Agent:** legal@resilabs.ai  
-**Address:** RESI, 30 N Gould Street Suite R, Sheridan, WY 82801
+**DMCA Agent:** legal@davincilabs.ai  
+**Address:** DaVinci Labs, 30 N Gould Street Suite R, Sheridan, WY 82801
 
 Your notice must include:
 - Identification of the copyrighted work claimed to be infringed
@@ -383,7 +383,7 @@ Your notice must include:
 
 ### 8.1 Contributor Agreement Required
 
-If you submit AI models or related materials to Subnet 46, you must accept our [Model Contributor Agreement](CONTRIBUTOR_AGREEMENT.md), which governs:
+If you submit AI models or related materials to the DaVinci Subnet, you must accept our [Model Contributor Agreement](CONTRIBUTOR_AGREEMENT.md), which governs:
 
 - Intellectual property licensing
 - Representations and warranties
@@ -394,7 +394,7 @@ The Contributor Agreement operates alongside and supplements these Terms.
 
 ### 8.2 License to Use Content
 
-For any content you submit to the Services (other than Submitted Materials covered by the Contributor Agreement), such as forum posts, comments, or feedback, you grant RESI a non-exclusive, worldwide, royalty-free, sublicensable license to:
+For any content you submit to the Services (other than Submitted Materials covered by the Contributor Agreement), such as forum posts, comments, or feedback, you grant DaVinci Labs a non-exclusive, worldwide, royalty-free, sublicensable license to:
 
 - Display, reproduce, and distribute the content on the Services
 - Use the content for marketing and promotional purposes
@@ -422,22 +422,22 @@ We are not responsible for monitoring all user content and have no obligation to
 
 ### 9.1 Reward Distribution
 
-Participants in Subnet 46 may earn TAO tokens ("Rewards") based on:
+Participants in the DaVinci Subnet may earn TAO tokens ("Rewards") based on:
 
 - Model performance and contribution (for Miners)
 - Validation activity (for Validators)
-- Subnet 46's incentive mechanism
+- the DaVinci Subnet's incentive mechanism
 
 **Important:**
 - Rewards are **performance-based** with no guaranteed amounts
 - Reward mechanisms and amounts may change as the protocol evolves
-- RESI does not guarantee any specific reward level or frequency
+- DaVinci Labs does not guarantee any specific reward level or frequency
 
 ### 9.2 Payment Method
 
 Rewards are distributed as:
 - **TAO tokens** to your registered Bittensor wallet address
-- Distributed on a schedule determined by RESI and the Bittensor protocol (e.g., per epoch, daily, weekly)
+- Distributed on a schedule determined by DaVinci Labs and the Bittensor protocol (e.g., per epoch, daily, weekly)
 
 ### 9.3 Wallet Requirements
 
@@ -446,7 +446,7 @@ Rewards are distributed as:
 - Securing your wallet private keys
 - Any loss of access to your wallet or private keys
 
-**RESI is NOT responsible for:**
+**DaVinci Labs is NOT responsible for:**
 - Loss of rewards due to incorrect wallet addresses
 - Loss of access to wallets or private keys
 - Recovery of lost or stolen cryptocurrencies
@@ -467,7 +467,7 @@ Rewards that remain unclaimed for **12 months** due to invalid wallet addresses 
 - An independent contractor relationship
 - Any entitlement to benefits, insurance, or employment protections
 
-You are participating in Subnet 46 voluntarily. Rewards are incentive payments for participation, not compensation for services rendered.
+You are participating in the DaVinci Subnet voluntarily. Rewards are incentive payments for participation, not compensation for services rendered.
 
 ### 9.7 Tax Responsibilities
 
@@ -477,13 +477,13 @@ You are participating in Subnet 46 voluntarily. Rewards are incentive payments f
 - Paying all applicable taxes
 - Maintaining records of all transactions
 
-**RESI may:**
+**DaVinci Labs may:**
 - Issue tax forms (e.g., IRS Form 1099) if required by law
 - Request tax identification information (e.g., W-9, W-8BEN)
 - Withhold taxes if required by law
 - Report payments to tax authorities as required
 
-**RESI does not provide tax advice.** Consult with a qualified tax professional regarding your obligations.
+**DaVinci Labs does not provide tax advice.** Consult with a qualified tax professional regarding your obligations.
 
 ### 9.8 Cryptocurrency Risks
 
@@ -494,14 +494,14 @@ You are participating in Subnet 46 voluntarily. Rewards are incentive payments f
 - **Regulatory Risk:** Cryptocurrency regulations may change
 - **Technical Risk:** Blockchain networks may experience failures, forks, or attacks
 
-**RESI makes no representations about:**
+**DaVinci Labs makes no representations about:**
 - The value or future value of TAO tokens
 - The availability or functionality of the Bittensor network
 - The tax treatment of TAO tokens in any jurisdiction
 
 ### 9.9 Reward Adjustments and Reclamation
 
-RESI reserves the right to:
+DaVinci Labs reserves the right to:
 - Adjust rewards if fraud, manipulation, or violations are discovered
 - Reclaim wrongfully distributed rewards
 - Temporarily suspend reward distribution during investigations
@@ -513,7 +513,7 @@ RESI reserves the right to:
 
 ### 10.1 Privacy Policy
 
-Our collection, use, and disclosure of your personal information is governed by our [Privacy Policy](https://www.resilabs.ai/privacy), which is incorporated into these Terms by reference.
+Our collection, use, and disclosure of your personal information is governed by our [Privacy Policy](https://www.davincilabs.ai/privacy), which is incorporated into these Terms by reference.
 
 **Note:** You must create a Privacy Policy and host it at this URL before launch.
 
@@ -556,7 +556,7 @@ Depending on your jurisdiction, you may have rights to:
 - Opt out of certain data processing
 - Data portability
 
-To exercise privacy rights, contact: support@resilabs.ai
+To exercise privacy rights, contact: support@davincilabs.ai
 
 ### 10.6 International Data Transfers
 
@@ -582,9 +582,9 @@ After Account deletion, we may retain certain data in anonymized form or as requ
 
 ### 11.1 Bittensor Network
 
-Subnet 46 operates on the Bittensor network, which is maintained by the Bittensor community and OpenTensor Foundation, not by RESI.
+the DaVinci Subnet operates on the Bittensor network, which is maintained by the Bittensor community and OpenTensor Foundation, not by DaVinci Labs.
 
-**RESI is not responsible for:**
+**DaVinci Labs is not responsible for:**
 - Bittensor network availability or performance
 - Bittensor blockchain forks, attacks, or failures
 - TAO token value, availability, or functionality
@@ -600,7 +600,7 @@ The Services may integrate with or link to third-party services, including:
 - Cloud infrastructure providers
 - Communication tools
 
-**RESI does not endorse, control, or assume responsibility for third-party services.**
+**DaVinci Labs does not endorse, control, or assume responsibility for third-party services.**
 
 ### 11.3 Third-Party Links
 
@@ -623,7 +623,7 @@ Your use of third-party services integrated with our Services may be subject to 
 
 THE SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.
 
-TO THE FULLEST EXTENT PERMITTED BY LAW, RESI DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO:
+TO THE FULLEST EXTENT PERMITTED BY LAW, DaVinci Labs DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO:
 
 - **Merchantability:** The Services are fit for any particular purpose
 - **Non-Infringement:** The Services do not infringe third-party rights
@@ -635,7 +635,7 @@ TO THE FULLEST EXTENT PERMITTED BY LAW, RESI DISCLAIMS ALL WARRANTIES, INCLUDING
 
 ### 12.2 No Guarantee of Results
 
-RESI DOES NOT WARRANT OR GUARANTEE:
+DaVinci Labs DOES NOT WARRANT OR GUARANTEE:
 
 - That you will earn any Rewards or any specific amount of Rewards
 - That submitted models will be accepted or evaluated
@@ -646,7 +646,7 @@ RESI DOES NOT WARRANT OR GUARANTEE:
 
 ### 12.3 Third-Party Services
 
-RESI DISCLAIMS ALL LIABILITY FOR THIRD-PARTY SERVICES, INCLUDING:
+DaVinci Labs DISCLAIMS ALL LIABILITY FOR THIRD-PARTY SERVICES, INCLUDING:
 
 - The Bittensor network and TAO tokens
 - Wallet providers and cryptocurrency exchanges
@@ -657,7 +657,7 @@ RESI DISCLAIMS ALL LIABILITY FOR THIRD-PARTY SERVICES, INCLUDING:
 
 TAO TOKENS AND CRYPTOCURRENCY INVOLVE SIGNIFICANT RISK.
 
-**RESI DOES NOT:**
+**DaVinci Labs DOES NOT:**
 - Provide investment, financial, or legal advice
 - Make representations about token value or future returns
 - Guarantee the liquidity or exchangeability of TAO tokens
@@ -669,9 +669,9 @@ Consult with qualified financial and legal advisors before participating in cryp
 
 ### 12.5 AI Model Disclaimer
 
-AI MODELS EVALUATED ON SUBNET 46 ARE PROVIDED BY THIRD-PARTY CONTRIBUTORS, NOT BY RESI.
+AI MODELS EVALUATED ON SUBNET 46 ARE PROVIDED BY THIRD-PARTY CONTRIBUTORS, NOT BY DaVinci Labs.
 
-**RESI DOES NOT:**
+**DaVinci Labs DOES NOT:**
 - Warrant the accuracy, safety, or quality of any submitted models
 - Take responsibility for outputs generated by models
 - Guarantee that models are free from bias, errors, or harmful behaviors
@@ -703,7 +703,7 @@ BETA, EXPERIMENTAL, AND PREVIEW FEATURES ARE PROVIDED FOR TESTING PURPOSES ONLY 
 
 ### 13.1 Exclusion of Damages
 
-TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL RESI, ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR LICENSORS BE LIABLE FOR ANY:
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL DaVinci Labs, ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR LICENSORS BE LIABLE FOR ANY:
 
 **a) Indirect, Incidental, Special, Consequential, or Punitive Damages**, including but not limited to:
 - Loss of profits, revenue, or business opportunities
@@ -724,7 +724,7 @@ TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL RESI, ITS A
 
 ### 13.2 Cap on Liability
 
-TO THE EXTENT RESI IS FOUND LIABLE FOR ANY DAMAGES DESPITE THE EXCLUSIONS ABOVE, RESI'S TOTAL AGGREGATE LIABILITY SHALL NOT EXCEED THE GREATER OF:
+TO THE EXTENT DaVinci Labs IS FOUND LIABLE FOR ANY DAMAGES DESPITE THE EXCLUSIONS ABOVE, DaVinci Labs'S TOTAL AGGREGATE LIABILITY SHALL NOT EXCEED THE GREATER OF:
 
 **(a)** The total amount of Rewards paid to you in the **six (6) months** immediately preceding the event giving rise to liability, OR  
 **(b)** **One hundred U.S. dollars (USD $100.00)**
@@ -732,33 +732,33 @@ TO THE EXTENT RESI IS FOUND LIABLE FOR ANY DAMAGES DESPITE THE EXCLUSIONS ABOVE,
 ### 13.3 Basis of the Bargain
 
 YOU ACKNOWLEDGE AND AGREE THAT:
-- The disclaimers and limitations in these Terms are fundamental elements of the agreement between you and RESI
-- RESI would not be able to provide the Services on an economically reasonable basis without these limitations
+- The disclaimers and limitations in these Terms are fundamental elements of the agreement between you and DaVinci Labs
+- DaVinci Labs would not be able to provide the Services on an economically reasonable basis without these limitations
 - These limitations reflect a reasonable allocation of risk
 
 ### 13.4 Essential Purpose
 
 The limitations of liability shall apply even if:
-- RESI has been advised of the possibility of such damages
+- DaVinci Labs has been advised of the possibility of such damages
 - Any remedy fails of its essential purpose
 - Damages were foreseeable
 
 ### 13.5 Exceptions
 
-Some jurisdictions do not allow the exclusion or limitation of certain damages. In such jurisdictions, RESI's liability is limited to the maximum extent permitted by law.
+Some jurisdictions do not allow the exclusion or limitation of certain damages. In such jurisdictions, DaVinci Labs's liability is limited to the maximum extent permitted by law.
 
 These limitations do NOT apply to:
-- Death or personal injury caused by RESI's gross negligence or willful misconduct (to the extent not permitted by law)
+- Death or personal injury caused by DaVinci Labs's gross negligence or willful misconduct (to the extent not permitted by law)
 - Fraud or fraudulent misrepresentation
 - Liability that cannot be excluded or limited by law
 
 ### 13.6 User-to-User Interactions
 
-RESI IS NOT LIABLE FOR ANY INTERACTIONS OR DISPUTES BETWEEN USERS. You release RESI from any claims arising from interactions with other users.
+DaVinci Labs IS NOT LIABLE FOR ANY INTERACTIONS OR DISPUTES BETWEEN USERS. You release DaVinci Labs from any claims arising from interactions with other users.
 
 ### 13.7 Force Majeure
 
-RESI SHALL NOT BE LIABLE FOR ANY FAILURE OR DELAY IN PERFORMANCE DUE TO CAUSES BEYOND OUR REASONABLE CONTROL, INCLUDING:
+DaVinci Labs SHALL NOT BE LIABLE FOR ANY FAILURE OR DELAY IN PERFORMANCE DUE TO CAUSES BEYOND OUR REASONABLE CONTROL, INCLUDING:
 
 - Acts of God (earthquakes, floods, fires, storms, pandemics)
 - War, terrorism, riots, civil unrest
@@ -778,7 +778,7 @@ RESI SHALL NOT BE LIABLE FOR ANY FAILURE OR DELAY IN PERFORMANCE DUE TO CAUSES B
 You may terminate your Account at any time by:
 
 a) Ceasing use of the Services  
-b) Sending written notice to: support@resilabs.ai  
+b) Sending written notice to: support@davincilabs.ai  
 c) Following any account deletion process provided in the Services
 
 **Upon your termination:**
@@ -787,9 +787,9 @@ c) Following any account deletion process provided in the Services
 - You must stop operating any validator or miner nodes
 - Certain provisions of these Terms survive (see Section 14.6)
 
-### 14.2 Suspension by RESI
+### 14.2 Suspension by DaVinci Labs
 
-RESI may **suspend** your Account temporarily if:
+DaVinci Labs may **suspend** your Account temporarily if:
 
 a) We are investigating a potential violation of these Terms  
 b) We detect suspicious activity or potential fraud  
@@ -802,9 +802,9 @@ During suspension:
 - Reward distribution may be paused
 - We will make reasonable efforts to notify you and explain the reason
 
-### 14.3 Termination by RESI for Cause
+### 14.3 Termination by DaVinci Labs for Cause
 
-RESI may **terminate** your Account immediately, with or without notice, if:
+DaVinci Labs may **terminate** your Account immediately, with or without notice, if:
 
 a) **Terms Violation:** You breach any material term of these Terms or the Contributor Agreement
 
@@ -822,17 +822,17 @@ e) **Government Action:** Your Account is subject to legal action, court order, 
 
 f) **Inactivity:** Your Account has been inactive for 12 months
 
-g) **Risk to Platform:** Your continued access poses risk to RESI, other users, or the Services
+g) **Risk to Platform:** Your continued access poses risk to DaVinci Labs, other users, or the Services
 
 **Upon termination for cause:**
 - Access to the Services is immediately revoked
 - Unpaid Rewards may be forfeited
 - We may retain data as required for legal compliance
-- RESI retains all rights to previously submitted materials (per Contributor Agreement)
+- DaVinci Labs retains all rights to previously submitted materials (per Contributor Agreement)
 
-### 14.4 Termination by RESI Without Cause
+### 14.4 Termination by DaVinci Labs Without Cause
 
-RESI may terminate your Account or discontinue the Services for any reason or no reason, with **thirty (30) days' notice** when feasible.
+DaVinci Labs may terminate your Account or discontinue the Services for any reason or no reason, with **thirty (30) days' notice** when feasible.
 
 **Upon termination without cause:**
 - You will receive any earned but unpaid Rewards (subject to verification)
@@ -845,18 +845,18 @@ Upon termination of your Account:
 a) **Access Ends:** All licenses and rights to use the Services immediately terminate
 
 b) **Data Handling:**
-   - RESI may delete your Account data in accordance with our Privacy Policy
+   - DaVinci Labs may delete your Account data in accordance with our Privacy Policy
    - Some data may be retained as required by law or for legal purposes
    - Submitted Materials remain subject to the licenses granted in the Contributor Agreement
 
 c) **Outstanding Obligations:**
    - You remain responsible for any obligations incurred before termination
-   - Any amounts owed to RESI become immediately due
+   - Any amounts owed to DaVinci Labs become immediately due
    - Indemnification obligations survive termination
 
 d) **No Refunds:** No refunds, credits, or prorated amounts will be provided for unused services or periods
 
-e) **Reactivation:** RESI may, at its sole discretion, permit you to reactivate your Account
+e) **Reactivation:** DaVinci Labs may, at its sole discretion, permit you to reactivate your Account
 
 ### 14.6 Survival
 
@@ -877,7 +877,7 @@ The following sections survive termination of your Account or these Terms:
 
 ### 15.1 Service Modifications
 
-RESI reserves the right to:
+DaVinci Labs reserves the right to:
 
 - Modify, update, or discontinue any feature of the Services
 - Change evaluation methodologies, scoring algorithms, or reward mechanisms
@@ -910,7 +910,7 @@ If you do not agree to the changes:
 
 Each version of these Terms will be:
 - Numbered and dated
-- Archived and accessible at https://www.resilabs.ai/legal/archive
+- Archived and accessible at https://www.davincilabs.ai/legal/archive
 - Recorded in your Account history (which version you accepted)
 
 ---
@@ -921,7 +921,7 @@ Each version of these Terms will be:
 
 **Before initiating any legal action, you agree to attempt informal resolution:**
 
-a) Send a detailed written description of the dispute to: legal@resilabs.ai
+a) Send a detailed written description of the dispute to: legal@davincilabs.ai
 
 b) Include:
    - Your Account information
@@ -929,7 +929,7 @@ b) Include:
    - Relevant facts, dates, and documentation
    - Proposed resolution
 
-c) Engage in good faith negotiations with RESI for at least **thirty (30) days**
+c) Engage in good faith negotiations with DaVinci Labs for at least **thirty (30) days**
 
 d) Consider mediation or other alternative dispute resolution
 
@@ -937,11 +937,11 @@ d) Consider mediation or other alternative dispute resolution
 
 ### 16.2 Binding Arbitration Agreement
 
-**IF INFORMAL RESOLUTION FAILS, YOU AND RESI AGREE THAT ANY DISPUTE ARISING FROM OR RELATING TO THESE TERMS OR THE SERVICES SHALL BE RESOLVED BY BINDING ARBITRATION, NOT IN COURT.**
+**IF INFORMAL RESOLUTION FAILS, YOU AND DaVinci Labs AGREE THAT ANY DISPUTE ARISING FROM OR RELATING TO THESE TERMS OR THE SERVICES SHALL BE RESOLVED BY BINDING ARBITRATION, NOT IN COURT.**
 
 **Arbitration Terms:**
 
-a) **Arbitration Rules:** The arbitration will be conducted under the Commercial Arbitration Rules of the American Arbitration Association (AAA) or JAMS, as determined by RESI
+a) **Arbitration Rules:** The arbitration will be conducted under the Commercial Arbitration Rules of the American Arbitration Association (AAA) or JAMS, as determined by DaVinci Labs
 
 b) **Location:** Sheridan, Wyoming
 
@@ -963,11 +963,11 @@ i) **Confidentiality:** The arbitration proceedings, including all documents and
 
 ### 16.3 Class Action and Collective Action Waiver
 
-**YOU AND RESI AGREE THAT:**
+**YOU AND DaVinci Labs AGREE THAT:**
 
 - **Disputes will be resolved on an individual basis only**
 - **You waive the right to participate in class actions, collective actions, or representative proceedings**
-- Neither you nor RESI may bring claims as a plaintiff or class member in any purported class, collective, or representative action
+- Neither you nor DaVinci Labs may bring claims as a plaintiff or class member in any purported class, collective, or representative action
 - The arbitrator has no authority to conduct class or collective proceedings or make awards to any person other than you individually
 
 **If this class action waiver is found to be unenforceable for any reason, the entire arbitration agreement (Section 16.2) is void, and disputes will be resolved in court per Section 16.7.**
@@ -978,10 +978,10 @@ i) **Confidentiality:** The arbitration proceedings, including all documents and
 
 Within **thirty (30) days** of first accepting these Terms, you may opt out by sending written notice to:
 
-**RESI Legal Department**  
+**DaVinci Labs Legal Department**  
 30 N Gould Street Suite R  
 Sheridan, WY 82801  
-Email: legal@resilabs.ai
+Email: legal@davincilabs.ai
 
 Your opt-out notice must include:
 - Your name and contact information
@@ -1025,13 +1025,13 @@ If arbitration does not apply (due to opt-out, exceptions, or unenforceability):
 
 ### 16.8 Limitation on Time to File Claims
 
-**YOU AND RESI AGREE THAT ANY CLAIM ARISING FROM OR RELATING TO THESE TERMS OR THE SERVICES MUST BE FILED WITHIN ONE (1) YEAR AFTER THE CLAIM ARISES.**
+**YOU AND DaVinci Labs AGREE THAT ANY CLAIM ARISING FROM OR RELATING TO THESE TERMS OR THE SERVICES MUST BE FILED WITHIN ONE (1) YEAR AFTER THE CLAIM ARISES.**
 
 If not filed within this period, the claim is permanently barred.
 
 ### 16.9 Equitable Relief
 
-Nothing in these Terms prevents RESI from seeking equitable relief (injunctions, specific performance) in any court of competent jurisdiction for:
+Nothing in these Terms prevents DaVinci Labs from seeking equitable relief (injunctions, specific performance) in any court of competent jurisdiction for:
 - Breach of intellectual property rights
 - Breach of confidentiality obligations
 - Urgent security threats or ongoing harm
@@ -1044,10 +1044,10 @@ Nothing in these Terms prevents RESI from seeking equitable relief (injunctions,
 
 These Terms, together with:
 - The [Model Contributor Agreement](CONTRIBUTOR_AGREEMENT.md)
-- The [Privacy Policy](https://www.resilabs.ai/privacy)
+- The [Privacy Policy](https://www.davincilabs.ai/privacy)
 - Any additional policies or guidelines we publish
 
-...constitute the **entire agreement** between you and RESI regarding the Services and supersede all prior agreements, understandings, and communications, whether written or oral.
+...constitute the **entire agreement** between you and DaVinci Labs regarding the Services and supersede all prior agreements, understandings, and communications, whether written or oral.
 
 ### 17.2 Severability
 
@@ -1064,32 +1064,32 @@ No waiver of any provision of these Terms constitutes:
 - A waiver of any other provision
 - A continuing waiver of that provision
 
-RESI's failure to enforce any right or provision does not waive RESI's right to enforce it later.
+DaVinci Labs's failure to enforce any right or provision does not waive DaVinci Labs's right to enforce it later.
 
-Any waiver must be in writing and signed by an authorized RESI representative.
+Any waiver must be in writing and signed by an authorized DaVinci Labs representative.
 
 ### 17.4 Assignment
 
-**RESI's Rights:**  
-RESI may assign these Terms, in whole or in part, to any person or entity, including:
+**DaVinci Labs's Rights:**  
+DaVinci Labs may assign these Terms, in whole or in part, to any person or entity, including:
 - In connection with merger, acquisition, corporate reorganization, or sale of assets
 - To any affiliate or subsidiary
 - To any successor in interest
 
 **Your Rights:**  
-You may not assign or transfer these Terms or any rights or obligations without RESI's prior written consent. Any attempted assignment without consent is void.
+You may not assign or transfer these Terms or any rights or obligations without DaVinci Labs's prior written consent. Any attempted assignment without consent is void.
 
 **This Agreement binds and benefits the parties and their permitted successors and assigns.**
 
 ### 17.5 No Third-Party Beneficiaries
 
-These Terms are solely between you and RESI. No third party has any right to enforce or benefit from any provision of these Terms, except:
-- RESI's affiliates, officers, directors, employees, and agents (who are intended beneficiaries for limitation of liability and indemnification purposes)
-- RESI's successors and assigns
+These Terms are solely between you and DaVinci Labs. No third party has any right to enforce or benefit from any provision of these Terms, except:
+- DaVinci Labs's affiliates, officers, directors, employees, and agents (who are intended beneficiaries for limitation of liability and indemnification purposes)
+- DaVinci Labs's successors and assigns
 
 ### 17.6 Independent Contractors
 
-You and RESI are independent contractors. These Terms do not create:
+You and DaVinci Labs are independent contractors. These Terms do not create:
 - A partnership, joint venture, or agency relationship
 - An employer-employee or contractor relationship
 - Authority for either party to bind the other
@@ -1105,13 +1105,13 @@ We may provide notices to you via:
 
 You are responsible for keeping your contact information current.
 
-**Notices to RESI:**  
+**Notices to DaVinci Labs:**  
 You must send legal notices to:
 
-**RESI Legal Department**  
+**DaVinci Labs Legal Department**  
 30 N Gould Street Suite R  
 Sheridan, WY 82801  
-Email: legal@resilabs.ai
+Email: legal@davincilabs.ai
 
 **For legal notices, you must use BOTH:**
 - Email with read receipt confirmation, AND
@@ -1143,11 +1143,11 @@ You represent that you are not:
 - On any U.S. government prohibited party list
 - Otherwise prohibited from receiving goods or technology from the U.S.
 
-You will not export, re-export, or transfer any RESI technology or services to prohibited destinations or parties.
+You will not export, re-export, or transfer any DaVinci Labs technology or services to prohibited destinations or parties.
 
 ### 17.10 Government Users
 
-If you are a U.S. government entity or contractor, RESI provides all materials and services as "Commercial Items" as defined at 48 C.F.R. §2.101.
+If you are a U.S. government entity or contractor, DaVinci Labs provides all materials and services as "Commercial Items" as defined at 48 C.F.R. §2.101.
 
 Government users acquire only the rights specified in these Terms, consistent with 48 C.F.R. §12.212 (for civilian agencies) and 48 C.F.R. §227.7202 (for DoD).
 
@@ -1190,32 +1190,32 @@ Electronic acceptance is valid and binding, equivalent to a handwritten signatur
 
 For questions about these Terms:
 
-**General Inquiries:** support@resilabs.ai  
-**Legal Questions:** legal@resilabs.ai  
-**Privacy Questions:** support@resilabs.ai  
-**Security Issues:** support@resilabs.ai
+**General Inquiries:** support@davincilabs.ai  
+**Legal Questions:** legal@davincilabs.ai  
+**Privacy Questions:** support@davincilabs.ai  
+**Security Issues:** support@davincilabs.ai
 
 ---
 
 ## 18. Contact Information
 
-**RESI Legal Department**
+**DaVinci Labs Legal Department**
 
 **Mailing Address:**  
-RESI  
+DaVinci Labs  
 30 N Gould Street Suite R  
 Sheridan, WY 82801  
 United States
 
 **Email Contacts:**
-- **General Support:** support@resilabs.ai
-- **Legal Inquiries:** legal@resilabs.ai
-- **Privacy Matters:** support@resilabs.ai
-- **Security Issues:** support@resilabs.ai
-- **DMCA Notices:** legal@resilabs.ai
-- **Terms Violations:** support@resilabs.ai
+- **General Support:** support@davincilabs.ai
+- **Legal Inquiries:** legal@davincilabs.ai
+- **Privacy Matters:** support@davincilabs.ai
+- **Security Issues:** support@davincilabs.ai
+- **DMCA Notices:** legal@davincilabs.ai
+- **Terms Violations:** support@davincilabs.ai
 
-**Website:** www.resilabs.ai
+**Website:** www.davincilabs.ai
 
 **Business Hours:** Available via email 24/7. We aim to respond within 1-2 business days (Mountain Time).
 
@@ -1223,7 +1223,7 @@ United States
 
 ## Acknowledgment and Acceptance
 
-**BY ACCESSING OR USING SUBNET 46 OR ANY RESI SERVICES, YOU ACKNOWLEDGE THAT:**
+**BY ACCESSING OR USING SUBNET 46 OR ANY DaVinci Labs SERVICES, YOU ACKNOWLEDGE THAT:**
 
 1. You have read and understood these Terms of Service
 2. You agree to be bound by these Terms
@@ -1240,7 +1240,7 @@ United States
 
 ---
 
-## For RESI Internal Use
+## For DaVinci Labs Internal Use
 
 **Document Status:** DRAFT - Requires legal review and executive approval
 

@@ -263,7 +263,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--netuid",
-        default=os.environ.get("NETUID", "46"),
+        default=os.environ.get("NETUID", "0"),  # Set via NETUID env var
     )
     parser.add_argument(
         "--pylon.url",
@@ -292,7 +292,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--wandb.project",
         dest="wandb_project",
-        default=os.environ.get("WANDB_PROJECT", "subnet-46-evaluations-mainnet"),
+        default=os.environ.get("WANDB_PROJECT", "davinci-evaluations-mainnet"),
     )
     parser.add_argument(
         "--wandb.entity",
@@ -309,7 +309,7 @@ if __name__ == "__main__":
         "--burn_uid",
         dest="burn_uid",
         type=int,
-        default=int(os.environ.get("BURN_UID", "238")),
+        default=int(os.environ.get("BURN_UID", "0")),
     )
 
     flags, extra_args = parser.parse_known_args()

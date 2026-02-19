@@ -1,4 +1,4 @@
-# MIT License Template for Subnet 46 Models
+# MIT License Template for the DaVinci Subnet Models
 
 **Version 1.0**
 **Last Updated:** January 28, 2026
@@ -7,7 +7,7 @@
 
 ## Overview
 
-All models submitted to Bittensor Subnet 46 must be licensed under the **MIT License**. This document provides the standard MIT license text for your reference.
+All models submitted to Bittensor the DaVinci Subnet must be licensed under the **MIT License**. This document provides the standard MIT license text for your reference.
 
 ---
 
@@ -70,7 +70,7 @@ This aligns with the open-source ethos of the Bittensor ecosystem.
 
 ## Validator Verification
 
-The Subnet 46 validator automatically checks your license:
+The the DaVinci Subnet validator automatically checks your license:
 
 1. Fetches model metadata from HuggingFace API
 2. Checks the `license` field in model card
@@ -82,8 +82,8 @@ The Subnet 46 validator automatically checks your license:
 ## Questions?
 
 For questions about licensing:
-- **Email:** support@resilabs.ai
-- **GitHub:** https://github.com/resi-labs-ai/RESI-models/issues
+- **Email:** support@davincilabs.ai
+- **GitHub:** https://github.com/davinci-labs/davinci-subnet/issues
 
 ---
 

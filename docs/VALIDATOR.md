@@ -39,7 +39,7 @@ Suggested starting point - adjust based on your load and number of miners on the
 - **uv** package manager ([install guide](https://docs.astral.sh/uv/getting-started/installation/))
 - **PM2** process manager (`npm install -g pm2`)
 - **Bittensor wallet** with sufficient TAO for registration
-- Registered hotkey on subnet 46
+- Registered hotkey on the DaVinci subnet
 
 ## Installation
 
@@ -87,13 +87,13 @@ PYLON_URL=http://localhost:8000
 # Network Configuration
 # =============================================================================
 SUBTENSOR_NETWORK=finney
-NETUID=46
+NETUID=<your_subnet_uid>
 
 # =============================================================================
 # WandB Logging (Recommended)
 # =============================================================================
 WANDB_API_KEY=your_wandb_api_key_here
-WANDB_PROJECT=subnet-46-evaluations-mainnet
+WANDB_PROJECT=davinci-evaluations-mainnet
 WANDB_ENTITY=davinci-labs
 ```
 
@@ -128,8 +128,8 @@ docker ps
 # Check logs
 docker logs davinci_pylon
 
-# Test API is responding (NETUID: mainnet=46, testnet=428 , local=<localnet_netuid>)
-curl http://localhost:8000/api/v1/identity/validator/subnet/<NETUID>/block/latest/neurons
+# Test API is responding
+curl http://localhost:8000/api/v1/identity/validator/subnet/$NETUID/block/latest/neurons
 ```
 
 ### Build ONNX Runner Image
@@ -160,7 +160,7 @@ Or pass arguments directly:
 pm2 start "uv run python scripts/start_validator.py \
     --wallet.name validator \
     --wallet.hotkey default \
-    --netuid 46 \
+    --netuid $NETUID \
     --pylon.token YOUR_PYLON_TOKEN \
     --pylon.identity validator" --name davinci_autoupdater
 ```
@@ -176,7 +176,7 @@ set -a && source .env && set +a
 pm2 start "uv run python -m davinci.validator.validator \
     --wallet.name validator \
     --wallet.hotkey default \
-    --netuid 46 \
+    --netuid $NETUID \
     --pylon.token YOUR_PYLON_TOKEN \
     --pylon.identity validator" --name davinci_validator
 ```
@@ -200,7 +200,7 @@ docker logs -f davinci_pylon
 #### Expected Startup Logs
 
 ```
-INFO | Config: {'netuid': 46, 'wallet_name': 'validator', ...}
+INFO | Config: {'netuid': <NETUID>, 'wallet_name': 'validator', ...}
 INFO | Validator initialized
 INFO | Starting metagraph sync...
 INFO | Pre-download phase: ...
@@ -271,7 +271,7 @@ set -a && source .env && set +a
 pm2 start "uv run python -m davinci.validator.validator \
     --wallet.name validator \
     --wallet.hotkey default \
-    --netuid 46 \
+    --netuid $NETUID \
     --pylon.token YOUR_PYLON_TOKEN \
     --pylon.identity validator" --name davinci_validator
 ```
@@ -359,7 +359,7 @@ docker logs --since 24h davinci_pylon > pylon_debug.log 2>&1
 |----------|---------|-------------|
 | **Network** | | |
 | `SUBTENSOR_NETWORK` | `finney` | Network name or `ws://` endpoint |
-| `NETUID` | `46` | Subnet UID |
+| `NETUID` | `0` | Subnet UID (set to your registered netuid) |
 | `PYLON_URL` | `http://localhost:8000` | Pylon service URL |
 | `ARCHIVE_NETWORK` | `finney` | Archive network for Pylon historical block lookups |
 | `ARCHIVE_BLOCKS_CUTOFF` | `256` | Blocks older than this use archive node |
@@ -370,7 +370,7 @@ docker logs --since 24h davinci_pylon > pylon_debug.log 2>&1
 | `EVAL_DATA_SCHEDULE_MINUTE` | `0` | Minute for scheduled daily evaluation |
 | **Burn Configuration** | | |
 | `BURN_AMOUNT` | `0.5` | Fraction of emissions to burn (0.0-1.0) |
-| `BURN_UID` | `238` | UID receiving burn allocation (subnet owner) |
+| `BURN_UID` | `0` | UID receiving burn allocation (subnet owner) |
 | **Model Settings** | | |
 | `MODEL_CACHE_PATH` | `./model_cache` | Path to cache downloaded models |
 | `MODEL_MAX_SIZE_MB` | `200` | Maximum model size in MB |
@@ -390,7 +390,7 @@ docker logs --since 24h davinci_pylon > pylon_debug.log 2>&1
 | `LOG_LEVEL` | `DEBUG` | Logging level (DEBUG, INFO, WARNING, ERROR) |
 | **WandB** | | |
 | `WANDB_API_KEY` | | WandB API key (request from subnet owners on Discord) |
-| `WANDB_PROJECT` | `subnet-46-evaluations-mainnet` | WandB project name |
+| `WANDB_PROJECT` | `davinci-evaluations-mainnet` | WandB project name |
 | `WANDB_ENTITY` | `davinci-labs` | WandB team/entity |
 | `WANDB_OFF` | `false` | Disable WandB logging |
 | `WANDB_OFFLINE` | `false` | Run WandB in offline mode (logs saved locally) |
@@ -401,14 +401,14 @@ docker logs --since 24h davinci_pylon > pylon_debug.log 2>&1
 
 ```bash
 SUBTENSOR_NETWORK=finney
-NETUID=46
+NETUID=<your_subnet_uid>
 ```
 
 ### Testnet
 
 ```bash
 SUBTENSOR_NETWORK=test
-NETUID=428
+NETUID=<your_testnet_uid>
 ```
 
 ### Custom Endpoint
@@ -439,7 +439,7 @@ lsof -i :8000
 
 ```bash
 # Verify Pylon is responding
-curl http://localhost:8000/api/v1/identity/validator/subnet/46/block/latest/neurons
+curl http://localhost:8000/api/v1/identity/validator/subnet/$NETUID/block/latest/neurons
 
 # Check token matches
 echo $PYLON_TOKEN
@@ -482,7 +482,7 @@ docker compose build onnx-runner
 btcli wallet list
 
 # Check registration
-btcli subnet metagraph --netuid 46 --subtensor.network finney
+btcli subnet metagraph --netuid $NETUID --subtensor.network finney
 
 # Verify wallet files are readable
 ls -la ~/.bittensor/wallets/$WALLET_NAME/hotkeys/

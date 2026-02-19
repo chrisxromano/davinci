@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 
 from .errors import ExtrinsicNotFoundError, MinerCLIError
@@ -76,9 +77,9 @@ def cmd_submit(args: argparse.Namespace) -> int:
     if args.netuid is not None:
         netuid = args.netuid
     elif args.network in ("finney", "mainnet"):
-        netuid = 46
+        netuid = int(os.environ.get("NETUID", "0"))
     elif args.network in ("test", "testnet"):
-        netuid = 428
+        netuid = int(os.environ.get("NETUID", "0"))
     else:
         # Custom endpoint - require explicit netuid
         print(

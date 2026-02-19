@@ -67,18 +67,17 @@ class TestEvaluationEventSequence:
     """Tests for evaluation event triggering and handling."""
 
     @pytest.mark.asyncio
-    async def test_validation_data_triggers_evaluation_event(self, mock_validator) -> None:
-        """Validation data callback should set the evaluation event."""
-        # Event should not be set initially
-        assert not mock_validator._evaluation_event.is_set()
+    async def test_try_load_eval_data_sets_validation_data(self, mock_validator) -> None:
+        """Loading eval data should store the dataset on the validator."""
+        assert mock_validator.validation_data is None
 
-        # Simulate validation data callback
         mock_dataset = MagicMock()
         mock_dataset.__len__ = MagicMock(return_value=100)
-        mock_validator._on_validation_data_fetched(mock_dataset, None)
+        mock_validator.data_loader.load_latest = MagicMock(return_value=mock_dataset)
 
-        # Event should now be set
-        assert mock_validator._evaluation_event.is_set()
+        result = mock_validator._try_load_eval_data()
+
+        assert result is True
         assert mock_validator.validation_data == mock_dataset
 
     @pytest.mark.asyncio
@@ -249,45 +248,49 @@ class TestValidationDataFetchFailure:
     """Tests for handling validation data fetch failures."""
 
     @pytest.mark.asyncio
-    async def test_data_fetch_failure_does_not_trigger_event(self, mock_validator) -> None:
-        """Validation data fetch failure should not trigger evaluation event."""
-        # Event should not be set initially
-        assert not mock_validator._evaluation_event.is_set()
+    async def test_data_fetch_failure_returns_false(self, mock_validator) -> None:
+        """Failed data load should return False and not set validation_data."""
+        from davinci.data.loader import EvaluationDataNotFoundError
+
         assert mock_validator.validation_data is None
 
-        # Simulate failed fetch - dataset is None
-        mock_validator._on_validation_data_fetched(None, None)
+        mock_validator.data_loader.load_latest = MagicMock(
+            side_effect=EvaluationDataNotFoundError("no data")
+        )
 
-        # Event should NOT be set on failure
-        assert not mock_validator._evaluation_event.is_set()
-        # validation_data should remain None
+        result = mock_validator._try_load_eval_data()
+
+        assert result is False
         assert mock_validator.validation_data is None
 
     @pytest.mark.asyncio
     async def test_data_fetch_success_after_failure(self, mock_validator) -> None:
-        """Successful fetch after previous failure should work correctly."""
-        # First: failed fetch
-        mock_validator._on_validation_data_fetched(None, None)
-        assert not mock_validator._evaluation_event.is_set()
+        """Successful load after previous failure should work correctly."""
+        from davinci.data.loader import EvaluationDataNotFoundError
 
-        # Second: successful fetch
+        # First: failed load
+        mock_validator.data_loader.load_latest = MagicMock(
+            side_effect=EvaluationDataNotFoundError("no data")
+        )
+        assert mock_validator._try_load_eval_data() is False
+        assert mock_validator.validation_data is None
+
+        # Second: successful load
         mock_dataset = MagicMock()
         mock_dataset.__len__ = MagicMock(return_value=100)
-        mock_validator._on_validation_data_fetched(mock_dataset, None)
+        mock_validator.data_loader.load_latest = MagicMock(return_value=mock_dataset)
 
-        # Now event should be set
-        assert mock_validator._evaluation_event.is_set()
+        assert mock_validator._try_load_eval_data() is True
         assert mock_validator.validation_data == mock_dataset
 
     @pytest.mark.asyncio
-    async def test_empty_dataset_does_not_trigger_event(self, mock_validator) -> None:
-        """Empty dataset should not trigger evaluation - nothing to evaluate."""
-        # Simulate empty dataset
+    async def test_empty_dataset_returns_false(self, mock_validator) -> None:
+        """Empty dataset should return False - nothing to evaluate."""
         mock_dataset = MagicMock()
         mock_dataset.__len__ = MagicMock(return_value=0)
-        mock_validator._on_validation_data_fetched(mock_dataset, None)
+        mock_validator.data_loader.load_latest = MagicMock(return_value=mock_dataset)
 
-        # Event should NOT be set - empty dataset means nothing to evaluate
-        assert not mock_validator._evaluation_event.is_set()
-        # validation_data should not be updated
+        result = mock_validator._try_load_eval_data()
+
+        assert result is False
         assert mock_validator.validation_data is None

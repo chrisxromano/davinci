@@ -323,7 +323,7 @@ class TestSetWeights:
         validator.scores = np.array([0.0, 0.0, 0.0, 0.0, 0.0], dtype=np.float32)
         validator.metagraph = create_mock_metagraph(validator.hotkeys)
 
-        # burn_amount is hardcoded to 0.5 in validator.py, config value ignored
+        # burn_amount is hardcoded to 0.5 in validator.py
         validator.config.burn_uid = 2
 
         mock_chain = MagicMock()

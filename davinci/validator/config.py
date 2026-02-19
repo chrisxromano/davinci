@@ -24,7 +24,7 @@ def add_args(parser: argparse.ArgumentParser) -> None:
         "--netuid",
         type=int,
         help="Subnet netuid to validate on.",
-        default=int(os.environ.get("NETUID", "46")),
+        default=int(os.environ.get("NETUID", "0")),  # Set via NETUID env var
     )
 
     parser.add_argument(
@@ -280,7 +280,7 @@ def add_args(parser: argparse.ArgumentParser) -> None:
         "--burn_uid",
         type=int,
         help="UID of subnet owner to receive burn allocation (protocol burns this emission).",
-        default=int(os.environ.get("BURN_UID", "238")),
+        default=int(os.environ.get("BURN_UID", "0")),
     )
 
 

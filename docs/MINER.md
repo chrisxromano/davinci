@@ -1,6 +1,6 @@
 # Miner CLI Guide
 
-Guide for miners on the DaVinci GPR Bridge Scan Subnet (Bittensor subnet 46).
+Guide for miners on the DaVinci GPR Bridge Scan Subnet.
 
 ## Overview
 
@@ -172,7 +172,7 @@ miner-cli submit \
 | `--wallet.name` | Yes | - | Bittensor wallet name |
 | `--wallet.hotkey` | Yes | - | Wallet hotkey name |
 | `--network` | No | `finney` | Network: `finney`, `test`, or `ws://` endpoint |
-| `--netuid` | No | Auto | Subnet UID (46 for finney, 428 for test) |
+| `--netuid` | No | Auto | Subnet UID |
 | `--skip-scan` | No | False | Skip scanning for extrinsic ID |
 | `--scan-blocks` | No | 25 | Blocks to scan for extrinsic |
 | `--no-commit-reveal` | No | False | Disable commit-reveal (not recommended) |
@@ -181,8 +181,8 @@ miner-cli submit \
 **Network options:**
 | Network | Flag | Subnet UID |
 |---------|------|------------|
-| Mainnet | `--network finney` | 46 |
-| Testnet | `--network test` | 428 |
+| Mainnet | `--network finney` | TBD |
+| Testnet | `--network test` | TBD |
 | Custom | `--network ws://host:port` | Must specify `--netuid` |
 
 **Commit-Reveal (enabled by default):**
@@ -324,11 +324,11 @@ ERROR: Model produced 5 NaN predictions.
 ### Hotkey not registered
 
 ```
-ERROR: Hotkey 5ABC... is not registered on subnet 46.
+ERROR: Hotkey 5ABC... is not registered on subnet <NETUID>.
 ```
 **Fix:** Register your hotkey:
 ```bash
-btcli subnets register --wallet.name miner --wallet.hotkey default --netuid 46
+btcli subnets register --wallet.name miner --wallet.hotkey default --netuid $NETUID
 ```
 
 ### Commitment failed
